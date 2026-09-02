@@ -70,7 +70,7 @@ plus two custom utilities, `bg-brand-gradient` and `text-brand-gradient`.
 - **App screenshot** — `src/components/PhoneMockup.tsx` is a CSS recreation of the
   analysis screen; replace with a real device screenshot when the UI is final
 - **Store links** in `src/components/GetApp.tsx` currently open an email; point them
-  at the Play Store / App Store listings once live
+  at the Play Store / App Store listings once lives
 - **Legal pages** in `footerLinks.legal` link to `#` — add real pages
 
 There are deliberately **no testimonials and no adoption statistics** on the
