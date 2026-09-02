@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens mirror the Flutter app's design system
+ * (D:\Astra\lib\core\theme\app_colors.dart) so the site and the app read as
+ * one product.
+ */
+@theme {
+  --color-brand-50: #eef9ff;
+  --color-brand-100: #d8f0ff;
+  --color-brand-200: #b9e6ff;
+  --color-brand-300: #89d8ff;
+  --color-brand-400: #52c0ff;
+  --color-brand-500: #2aa2f7;
+  --color-brand-600: #007acc;
+  --color-brand-700: #0a63a3;
+  --color-brand-800: #105386;
+  --color-brand-900: #12466f;
+
+  --color-teal-brand: #20b09c;
+  --color-teal-deep: #00695c;
+  --color-teal-ink: #0e6e78;
+
+  --color-ink: #1e293b;
+  --color-ink-muted: #64748b;
+  --color-ink-faint: #94a3b8;
+  --color-hairline: #e2e8f0;
+  --color-canvas: #f8fafc;
+
+  --color-warn: #f59e0b;
+  --color-danger: #dc2626;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor targets so the sticky header does not cover headings. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-200);
+    color: var(--color-teal-deep);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Signature aquaculture gradient: deep teal into the app's azure blue. */
+  .bg-brand-gradient {
+    background-image: linear-gradient(
+      135deg,
+      var(--color-teal-deep) 0%,
+      var(--color-teal-ink) 45%,
+      var(--color-brand-600) 100%
+    );
+  }
+
+  .text-brand-gradient {
+    background-image: linear-gradient(
+      120deg,
+      var(--color-teal-brand) 0%,
+      var(--color-brand-400) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Respect users who ask the OS to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
