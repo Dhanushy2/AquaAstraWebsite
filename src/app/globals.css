@@ -95,3 +95,240 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Hero "how the app works" slide: dashes travel along the flow, cards drift. */
+@media (prefers-reduced-motion: no-preference) {
+  .flow-dash {
+    animation: flow-dash 1.2s linear infinite;
+  }
+  .flow-float {
+    animation: flow-float 5s ease-in-out infinite;
+  }
+  .flow-pop {
+    animation: flow-pop 3.2s ease-in-out infinite;
+  }
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+@keyframes flow-float {
+  50% {
+    transform: translateY(-8px) rotate(var(--tilt, 0deg));
+  }
+}
+
+@keyframes flow-pop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow-ring {
+    animation: flow-ring 1.8s ease-out infinite;
+  }
+  .flow-tap {
+    animation: flow-tap 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes flow-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.18, 1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes flow-tap {
+  50% {
+    transform: translateY(-5px) scale(0.92);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow-bubble {
+    animation: flow-bubble 0.6s ease-out both;
+  }
+}
+
+@keyframes flow-bubble {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem) scale(0.92);
+  }
+}
+
+/* About page: the idea step's lit bulb. */
+.bulb-glow {
+  filter: drop-shadow(0 0 3px #fef08a) drop-shadow(0 0 8px #facc15);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bulb-glow {
+    animation: bulb-glow 2.4s ease-in-out infinite;
+  }
+  .bulb-rays {
+    animation: bulb-rays 2.4s ease-in-out infinite;
+  }
+  .bulb-halo {
+    animation: bulb-halo 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes bulb-glow {
+  50% {
+    filter: drop-shadow(0 0 6px #fef9c3) drop-shadow(0 0 16px #fde047);
+  }
+}
+
+@keyframes bulb-rays {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes bulb-halo {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* About page: the loop between prototype and review turns slowly. */
+@media (prefers-reduced-motion: no-preference) {
+  .loop-spin {
+    animation: loop-spin 6s linear infinite;
+  }
+}
+
+@keyframes loop-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* About page: the prototype step's layers fan apart and settle, like a build coming together. */
+@media (prefers-reduced-motion: no-preference) {
+  .stack-top {
+    animation: stack-top 2.4s ease-in-out infinite;
+  }
+  .stack-mid {
+    animation: stack-mid 2.4s ease-in-out infinite;
+  }
+  .stack-bottom {
+    animation: stack-bottom 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes stack-top {
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes stack-mid {
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes stack-bottom {
+  50% {
+    transform: translateY(1.5px);
+  }
+}
+
+/* About page: the review step's tick draws itself in, holds, then fades for the next pass. */
+@media (prefers-reduced-motion: no-preference) {
+  .review-tick {
+    stroke-dasharray: 1;
+    animation: review-tick 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes review-tick {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 1;
+  }
+  35%,
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+/* About page: the achieve step's rocket lifts off and settles while its flame flickers. */
+.rocket-flame {
+  transform-box: fill-box;
+  transform-origin: top right;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rocket-body {
+    animation: rocket-body 2.4s ease-in-out infinite;
+  }
+  .rocket-flame {
+    animation: rocket-flame 0.4s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes rocket-body {
+  50% {
+    transform: translate(1.5px, -1.5px);
+  }
+}
+
+@keyframes rocket-flame {
+  from {
+    transform: scale(0.75);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* About page: the translucent swell above the blue-to-green wave drifts sideways. */
+@media (prefers-reduced-motion: no-preference) {
+  .wave-drift {
+    animation: wave-drift 14s linear infinite;
+  }
+}
+
+@keyframes wave-drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hero picture slides: the blurred backdrop drifts slowly behind the framed picture. */
+@media (prefers-reduced-motion: no-preference) {
+  .poster-drift {
+    animation: poster-drift 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes poster-drift {
+  from {
+    transform: scale(1.1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.25) translate(-2%, -1%);
+  }
+}

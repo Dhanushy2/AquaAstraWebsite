@@ -4,10 +4,12 @@ import { useEffect, useState, type ReactNode } from "react";
 
 /**
  * Full-width hero carousel: each slide is a whole hero panel, auto-advancing
- * every 4s with prev / next / counter / pause controls overlaid at the bottom.
- * Auto-play is off under reduced-motion; the controls stay usable either way.
+ * every 5s, with previous / next on the left and right edges and a pause
+ * button at the bottom. Each slide's position ("2 of 4") is in its label for
+ * screen readers. Auto-play is off under reduced-motion; the controls stay
+ * usable either way.
  */
-const SLIDE_MS = 4000;
+const SLIDE_MS = 5000;
 
 export type HeroSlide = { label: string; content: ReactNode };
 
@@ -16,6 +18,9 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [reduceMotion, setReduceMotion] = useState(false);
+  // Bumped on every touch or click inside, restarting the countdown, so a
+  // visitor swiping through a slide's own content isn't carried off mid-swipe.
+  const [touches, setTouches] = useState(0);
 
   useEffect(() => {
     const query = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -29,7 +34,7 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     if (!playing || reduceMotion) return;
     const timer = window.setTimeout(() => setIndex((i) => (i + 1) % count), SLIDE_MS);
     return () => window.clearTimeout(timer);
-  }, [index, playing, reduceMotion, count]);
+  }, [index, playing, reduceMotion, count, touches]);
 
   const step = (delta: number) => setIndex((i) => (i + delta + count) % count);
 
@@ -38,9 +43,12 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       className="relative"
       aria-roledescription="carousel"
       aria-label="Aqua Astra hero"
+      onPointerDown={() => setTouches((t) => t + 1)}
     >
-      {/* Panels share one grid cell, so the stage is as tall as the tallest. */}
-      <div className="grid overflow-hidden">
+      {/* Panels share one grid cell, so the stage is as tall as the tallest.
+          grid-cols-1 (minmax(0, 1fr)) pins the column to the stage width; an
+          auto column would grow to fit a slide's sideways-scrolling row. */}
+      <div className="grid grid-cols-1 overflow-hidden">
         {slides.map((slide, i) => (
           <div
             key={slide.label}
@@ -59,37 +67,42 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         ))}
       </div>
 
+      {/* Previous / next sit on the left and right edges, level with the
+          picture on the picture slides: mid-panel on desktop, where the
+          picture is centred, and near the top below lg, where it sits at
+          1.5rem + 10svh down and is about 56vw tall. */}
+      <ControlButton
+        label="Previous slide"
+        onClick={() => step(-1)}
+        className="absolute left-2 top-[calc(1.5rem+10svh+28vw)] -translate-y-1/2 sm:left-4 lg:top-1/2"
+      >
+        <path d="M14.5 5.5 8 12l6.5 6.5" />
+      </ControlButton>
+      <ControlButton
+        label="Next slide"
+        onClick={() => step(1)}
+        className="absolute right-2 top-[calc(1.5rem+10svh+28vw)] -translate-y-1/2 sm:right-4 lg:top-1/2"
+      >
+        <path d="M9.5 5.5 16 12l-6.5 6.5" />
+      </ControlButton>
+
       <div className="absolute inset-x-0 bottom-5 flex justify-center">
-        <div className="flex items-center rounded-full border border-white/25 bg-black/25 backdrop-blur-sm">
-          <ControlButton label="Previous slide" onClick={() => step(-1)}>
-            <path d="M14.5 5.5 8 12l6.5 6.5" />
-          </ControlButton>
-
-          <p className="select-none px-1 text-xs font-medium tabular-nums text-white/90">
-            {index + 1}/{count}
-          </p>
-
-          <ControlButton label="Next slide" onClick={() => step(1)}>
-            <path d="M9.5 5.5 16 12l-6.5 6.5" />
-          </ControlButton>
-
-          <ControlButton
-            label={playing ? "Pause slideshow" : "Play slideshow"}
-            onClick={() => setPlaying((p) => !p)}
-            className="border-l border-white/25"
-          >
-            {playing ? (
-              <path d="M9.5 5.5v13M14.5 5.5v13" />
-            ) : (
-              <path d="M8 5.5 18 12 8 18.5z" fill="currentColor" />
-            )}
-          </ControlButton>
-        </div>
+        <ControlButton
+          label={playing ? "Pause slideshow" : "Play slideshow"}
+          onClick={() => setPlaying((p) => !p)}
+        >
+          {playing ? (
+            <path d="M9.5 5.5v13M14.5 5.5v13" />
+          ) : (
+            <path d="M8 5.5 18 12 8 18.5z" fill="currentColor" />
+          )}
+        </ControlButton>
       </div>
     </div>
   );
 }
 
+/** A round, frosted control over the slides. */
 function ControlButton({
   label,
   onClick,
@@ -107,12 +120,12 @@ function ControlButton({
       onClick={onClick}
       aria-label={label}
       title={label}
-      className={`px-3 py-2 text-white/75 transition-colors hover:text-white focus-visible:text-white ${className}`}
+      className={`z-10 grid h-10 w-10 place-items-center rounded-full border border-white/30 bg-black/25 text-white/85 shadow-lg shadow-black/20 backdrop-blur-sm transition-colors hover:bg-black/45 hover:text-white focus-visible:bg-black/45 focus-visible:text-white sm:h-12 sm:w-12 ${className}`}
     >
       <svg
         aria-hidden="true"
         viewBox="0 0 24 24"
-        className="h-4 w-4"
+        className="h-5 w-5"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.8"

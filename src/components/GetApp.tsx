@@ -51,7 +51,15 @@ export default function GetApp() {
               </div>
               <div>
                 <dt className="text-ink-faint">Based in</dt>
-                <dd className="mt-0.5 font-medium text-ink">{site.location}</dd>
+                <dd className="mt-0.5 font-medium text-ink">
+                  <address className="not-italic">
+                    {site.addressLines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </address>
+                </dd>
               </div>
             </dl>
           </div>

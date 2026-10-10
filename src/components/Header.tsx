@@ -6,13 +6,16 @@ import { navLinks, site } from "@/lib/content";
  * Sticky header. The mobile menu is a native <details> element rather than
  * React state, which keeps the whole site zero-JavaScript.
  */
-export default function Header() {
+export default function Header({ home = true }: { home?: boolean }) {
+  /** On other pages, in-page anchors point back at the home page. */
+  const to = (href: string) => (home || !href.startsWith("#") ? href : `/${href}`);
+
   return (
     <header className="sticky top-0 z-50 border-b border-hairline/70 bg-canvas/85 backdrop-blur-md">
       <Container>
         <div className="flex h-16 items-center justify-between gap-6 sm:h-18">
           <a
-            href="#top"
+            href={home ? "#top" : "/"}
             className="flex items-center gap-2.5 rounded-lg"
             aria-label={`${site.name} home`}
           >
@@ -26,7 +29,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={to(link.href)}
                 className="text-sm font-medium text-ink-muted transition-colors hover:text-teal-ink"
               >
                 {link.label}
@@ -36,7 +39,7 @@ export default function Header() {
 
           <div className="flex items-center gap-3">
             <a
-              href="#get-app"
+              href={to("#get-app")}
               className="hidden rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-teal-deep/20 transition-opacity hover:opacity-90 sm:inline-block"
             >
               Get the app
@@ -75,14 +78,14 @@ export default function Header() {
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
-                    href={link.href}
+                    href={to(link.href)}
                     className="block rounded-xl px-4 py-2.5 text-sm font-medium text-ink-muted transition-colors hover:bg-brand-50 hover:text-teal-ink"
                   >
                     {link.label}
                   </a>
                 ))}
                 <a
-                  href="#get-app"
+                  href={to("#get-app")}
                   className="mt-1 block rounded-xl bg-brand-gradient px-4 py-2.5 text-center text-sm font-semibold text-white"
                 >
                   Get the app

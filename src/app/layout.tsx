@@ -3,6 +3,7 @@ import { site } from "@/lib/content";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
     default: `${site.name} — ${site.tagline}`,
     template: `%s · ${site.name}`,
@@ -21,9 +22,13 @@ export const metadata: Metadata = {
     description: site.description,
     type: "website",
     siteName: site.name,
+    url: site.url,
   },
   icons: {
     icon: "/favicon.svg",
+  },
+  verification: {
+    other: { "facebook-domain-verification": "ijg40cyzpf3a1qz5kyd3vebs57ispv" },
   },
 };
 

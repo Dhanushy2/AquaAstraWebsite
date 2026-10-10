@@ -4,6 +4,10 @@ import { problem } from "@/lib/content";
 export default function Problem() {
   return (
     <Section id="problem">
+      <p className="mb-16 text-center text-2xl font-semibold tracking-tight text-teal-ink sm:mb-20 sm:text-3xl">
+        {problem.banner}
+      </p>
+
       <SectionHeading
         eyebrow="The problem"
         title={problem.title}

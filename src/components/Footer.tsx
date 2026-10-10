@@ -32,7 +32,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 border-t border-hairline py-7 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+            © {new Date().getFullYear()} {site.legalName}. All rights reserved.
           </p>
           <p>{site.tagline}</p>
         </div>

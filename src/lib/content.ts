@@ -7,24 +7,36 @@
 
 export type NavLink = { label: string; href: string };
 
+const addressLines = [
+  "6-137, 1st Floor, Arthamuru, Bantumilli",
+  "Krishna, Andhra Pradesh 521369",
+  "India",
+] as const;
+
 export const site = {
   name: "Aqua Astra",
+  /** Registered entity operating the Aqua Astra app and this website — must match Meta Business Manager. */
+  legalName: "Aqua Astra Enterprises LLP",
   tagline: "AI-powered shrimp aquaculture assistant",
   description:
     "Aqua Astra turns shrimp pond laboratory reports into clear health scores, plain-language explanations and actionable recommendations — in English and Telugu.",
-  email: "hello@aquaastra.com",
-  phone: "+91 00000 00000",
+  email: "aquaastraenterprises@gmail.com",
+  phone: "+91 79894 67777",
   location: "Andhra Pradesh, India",
+  addressLines,
+  registeredAddress: addressLines.join(", "),
   androidPackage: "com.aquaastra.aqua_astra",
+  url: "https://aquaastra.in",
 } as const;
 
 export const navLinks: NavLink[] = [
-  { label: "Problem", href: "#problem" },
+  { label: "Home", href: "#top" },
   { label: "How it works", href: "#how-it-works" },
   { label: "Features", href: "#features" },
   { label: "Who it is for", href: "#audience" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "FAQ", href: "#faq" },
+  { label: "About Us", href: "/about/" },
 ];
 
 export const hero = {
@@ -36,18 +48,174 @@ export const hero = {
   secondaryCta: { label: "See how it works", href: "#how-it-works" },
 };
 
+/**
+ * The two picture slides in the hero carousel. Each is shown whole; on phones
+ * and tablets a caption drawn from the picture itself sits beneath it.
+ */
+export const heroPosters = {
+  artwork: {
+    src: "/hero-grow-together.webp",
+    width: 1670,
+    height: 942,
+    alt: "Aqua Astra — Grow Together, ringed by its four promises: good seed, good feed, good medicine and good price, over an aerated shrimp pond at sunset.",
+    title: "Grow Together",
+    tags: ["Good Seed", "Good Feed", "Good Medicine", "Good Price"],
+  },
+  harvest: {
+    src: "/hero-farm-harvest-good-feed.webp",
+    width: 1672,
+    height: 941,
+    alt: "A shrimp farmer holding a handful of fresh vannamei in front of aerated ponds, beside blue crates of the day’s harvest and an Aqua Astra farm sign.",
+    title: "Healthy shrimp, better returns",
+    tags: ["Proper management", "Regular monitoring"],
+  },
+} as const;
+
+/** The app walkthrough slide in the hero carousel: share, see it in the app, get it on WhatsApp. */
+export const appWalkthrough = {
+  eyebrow: "How the app works",
+  title: "Share the report. We do the reading.",
+  subtitle:
+    "Send your lab report to Aqua Astra once. The results are ready in the app, and the same report card reaches your WhatsApp.",
+  steps: [
+    {
+      title: "Share your report",
+      body: "Share or upload your lab report PDF in the app, in English or తెలుగు.",
+    },
+    {
+      title: "See it in the app",
+      body: "A health score for every pond, checked against safe ranges, with plain advice.",
+    },
+    {
+      title: "Get it on WhatsApp",
+      body: "The report card also arrives in your chat from Aqua Astra, so you can read it anywhere.",
+    },
+  ],
+  whatsappFrom: site.phone,
+  /** Shown under the steps on phones and tablets, where they scroll sideways. */
+  swipeHint: "Swipe to see all 3 steps",
+  screens: {
+    upload: {
+      src: "/app-upload-report.webp",
+      alt: "Aqua Astra home screen for a new farm: Analyze Your Water Lab Report, with an Upload Report button and an English and Telugu language switch.",
+    },
+    home: {
+      src: "/app-home-health-score.webp",
+      alt: "Aqua Astra home screen: pond T1's water analysis report with a health score of 91, Healthy, and a recent report summary of temperature, salinity and pH.",
+    },
+    reports: {
+      src: "/app-reports-pond-summary.webp",
+      alt: "Aqua Astra reports screen: a lab report scored 78%, Good, with a ponds summary rating T1 at 91%, T2 at 74% and T3 at 88%.",
+    },
+    cards: [
+      {
+        src: "/app-whatsapp-report-card.webp",
+        alt: "Aqua Astra report card: average farm health of 63, Needs Attention, with each pond's score and the parameters out of range.",
+      },
+      {
+        src: "/app-whatsapp-report-card-2.webp",
+        alt: "Aqua Astra pond report card for pond A1: a Critical rating, with each water parameter shown as Good, Warning or Critical in English and Telugu.",
+      },
+    ],
+  },
+} as const;
+
+/** The About page: the app first, then Aqua Astra as a software partner for the aqua industry. */
+export const about = {
+  title: "About Aqua Astra Mobile App",
+  lead: "Aqua Astra Mobile App is an AI-powered shrimp aquaculture assistant that turns a laboratory report into a decision a farmer can act on.",
+  app: {
+    eyebrow: "The app",
+    title: "Your pond's lab report, finally readable",
+    body: [
+      "Water analysis arrives as a page of numbers. Aqua Astra Mobile App reads that report for you, checks every parameter against scientific thresholds, and gives each pond a clear health score with advice in plain language.",
+      "Share or upload a report once and the results are ready in the app. The same report card is also sent to your WhatsApp, so you can read it in the field without opening anything else.",
+    ],
+    points: [
+      {
+        icon: "scan",
+        title: "Reads the report",
+        body: "Upload a lab report and get a parameter-by-parameter reading in seconds.",
+      },
+      {
+        icon: "gauge",
+        title: "Scores every pond",
+        body: "A health score per pond, with each value marked healthy, warning or critical.",
+      },
+      {
+        icon: "language",
+        title: "English and తెలుగు",
+        body: "Explanations in the language you use on the farm.",
+      },
+      {
+        icon: "history",
+        title: "Keeps the history",
+        body: "Every report is saved, so you can watch a pond change from cycle to cycle.",
+      },
+    ],
+  },
+  industry: {
+    eyebrow: "Beyond the Mobile App",
+    title: "Building Intelligent Software for the Aqua Industry",
+    lead: "The same team that built Aqua Astra Mobile App can build software for your aquaculture business: farms, hatcheries, labs, feed and input suppliers, and processors.",
+    audiences: [
+      { label: "Farms", icon: "pond" },
+      { label: "Hatcheries", icon: "hatchery" },
+      { label: "Labs", icon: "lab" },
+      { label: "Processors", icon: "factory" },
+    ],
+    journeyTitle: "Everything Possible",
+    steps: [
+      {
+        name: "Idea",
+        tag: "Listen",
+        icon: "idea",
+        body: "We listen to the problem on your farm or in your business and shape it into something buildable.",
+      },
+      {
+        name: "Prototype",
+        tag: "Build fast",
+        icon: "prototype",
+        body: "A working first version, quickly, so you can see and touch the idea instead of imagining it.",
+      },
+      {
+        name: "Review",
+        tag: "Refine together",
+        icon: "review",
+        body: "You use it, we listen, and we refine it together until it fits the way your team works.",
+      },
+      {
+        name: "Achieve",
+        tag: "Launch & grow",
+        icon: "achieve",
+        body: "A finished product that delivers the result you set out for, and that we keep improving.",
+      },
+    ],
+    offers: [
+      { title: "Dashboards and analytics on your own data", icon: "dashboard" },
+      { title: "Lab and water-quality reporting tools", icon: "lab" },
+      { title: "Farm and pond management", icon: "pond" },
+      { title: "Mobile apps for farmers and field teams", icon: "mobile" },
+    ],
+    prompt: "Have an idea for your aqua business? Let's build it together.",
+    cta: { label: "Talk to us", href: "/contact-us/" },
+  },
+} as const;
+
 /** Capability highlights shown in the band under the hero. */
 export const highlights = [
   { value: "2", label: "Languages", detail: "English and Telugu throughout" },
-  { value: "1 photo", label: "To get started", detail: "Snap or upload your report" },
-  { value: "0", label: "Training needed", detail: "No lab background required" },
+  { value: "1 photo", label: "To get started", detail: "Share or upload your report" },
+  { label: "No Lab background required", detail: "No Training needed" },
   { value: "Every report", label: "Kept in history", detail: "Track a pond over time" },
 ];
 
 export const problem = {
+  /** Centred statement in the gap between the hero and this section. */
+  banner: "Built for Vannamei Aquaculture",
   title: "A report you cannot read is a decision you cannot make",
   intro:
-    "Water and soil analysis arrives as a page of numbers. Acting on it means holding several parameters in your head at once and knowing the safe range for each — under time pressure, cycle after cycle.",
+    "Water analysis arrives as a page of numbers. Acting on it means holding several parameters in your head at once and knowing the safe range for each — under time pressure, cycle after cycle.",
   points: [
     {
       title: "Reports are hard to interpret",
@@ -80,7 +248,7 @@ export const steps = [
   {
     step: "01",
     title: "Upload the report",
-    body: "Photograph a printed lab report or attach a PDF from your phone. No re-typing, no data entry.",
+    body: "Share a lab report or attach a PDF from your phone. No re-typing, no data entry.",
   },
   {
     step: "02",
@@ -104,7 +272,7 @@ export const steps = [
   },
   {
     step: "06",
-    title: "Recommendations & history",
+    title: "Analysis & history",
     body: "You get concrete next actions, and the report is filed so you can see the pond's trend over the cycle.",
   },
 ];
@@ -117,7 +285,18 @@ export type IconName =
   | "history"
   | "bell"
   | "pond"
-  | "weather";
+  | "weather"
+  | "idea"
+  | "prototype"
+  | "review"
+  | "cycle"
+  | "achieve"
+  | "dashboard"
+  | "lab"
+  | "mobile"
+  | "hatchery"
+  | "factory"
+  | "more";
 
 export type Feature = {
   title: string;
@@ -158,28 +337,16 @@ export const features: Feature[] = [
     status: "Available",
   },
   {
-    title: "Alerts",
-    body: "Push notifications when a reading crosses a threshold that needs a response today.",
-    icon: "bell",
-    status: "In progress",
-  },
-  {
-    title: "Farms & ponds",
-    body: "Organise multiple farms and ponds under one account, each with its own history and score.",
-    icon: "pond",
-    status: "In progress",
-  },
-  {
     title: "Weather context",
     body: "Local conditions alongside your readings, because water chemistry does not move in isolation.",
     icon: "weather",
-    status: "Planned",
+    status: "Available",
   },
 ];
 
 export const audience = [
   {
-    title: "Shrimp farmers",
+    title: "Vannamei shrimp farmers",
     body: "The primary user. Understand a report without scientific training, in your own language, on the device already in your pocket.",
   },
   {
@@ -196,21 +363,12 @@ export const audience = [
   },
 ];
 
-export const roadmap = [
-  "Disease detection",
-  "Continuous pond monitoring",
-  "Feed tracking",
-  "IoT sensor integration",
-  "AI chat assistant",
-  "Growth & harvest prediction",
-  "Video consultation",
-  "Financial reporting",
-];
+export const roadmap = ["Disease Detection"];
 
 export const faqs = [
   {
     q: "What exactly does Aqua Astra analyse?",
-    a: "Laboratory reports for shrimp ponds — water and soil analyses. You upload the report you already receive from your lab; Aqua Astra extracts the parameters, evaluates them, and explains the result.",
+    a: "Laboratory reports for shrimp ponds — water analyses. You upload the report you already receive from your lab; Aqua Astra extracts the parameters, evaluates them, and explains the result.",
   },
   {
     q: "Do I need to type in the values myself?",
@@ -228,10 +386,6 @@ export const faqs = [
     q: "Where is my data stored?",
     a: "Reports are stored against your account so you can see a pond's history over time. Sessions are held in your device's secure storage.",
   },
-  {
-    q: "What does it cost?",
-    a: "Pricing is being finalised ahead of launch. Get in touch and we will let you know before the app goes live.",
-  },
 ];
 
 export const footerLinks = {
@@ -248,8 +402,10 @@ export const footerLinks = {
     { label: "NACSA", href: "https://nacsa.mpeda.gov.in/" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms & Conditions", href: "#" },
-    { label: "Refund & Cancellation", href: "#" },
+    { label: "About Us", href: "/about/" },
+    { label: "Privacy Policy", href: "/privacy-policy/" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions/" },
+    { label: "Refund & Cancellation", href: "/refund-and-cancellation/" },
+    { label: "Contact Us", href: "/contact-us/" },
   ],
 };

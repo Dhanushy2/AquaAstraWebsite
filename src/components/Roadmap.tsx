@@ -8,19 +8,22 @@ export default function Roadmap() {
         eyebrow="Roadmap"
         tone="light"
         title="Lab reports first. Whole-farm management next."
-        lead="Version one does one job properly: read a report, score it, explain it. These are the capabilities queued behind it."
+        lead="Version one does one job properly: read a report, score it, explain it. This is the capability queued behind it."
       />
 
-      <ul className="mt-12 flex flex-wrap gap-3">
-        {roadmap.map((item) => (
-          <li
-            key={item}
-            className="rounded-full border border-white/25 bg-white/10 px-5 py-2.5 text-sm font-medium text-white/90 backdrop-blur-sm"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+      <div className="mt-12 flex flex-wrap items-center gap-4">
+        <p className="text-lg font-semibold text-white/90">Next Step:</p>
+        <ul className="flex flex-wrap gap-3">
+          {roadmap.map((item) => (
+            <li
+              key={item}
+              className="rounded-full bg-white px-7 py-3.5 text-base font-semibold text-teal-deep shadow-lg shadow-black/15"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </Section>
   );
 }
