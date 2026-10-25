@@ -26,6 +26,8 @@ export const site = {
   addressLines,
   registeredAddress: addressLines.join(", "),
   androidPackage: "com.aquaastra.aqua_astra",
+  /** The app is live on Google Play. */
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.aquaastra.aqua_astra",
   url: "https://aquaastra.in",
 } as const;
 
@@ -54,12 +56,12 @@ export const hero = {
  */
 export const heroPosters = {
   artwork: {
-    src: "/hero-grow-together.webp",
-    width: 1670,
-    height: 942,
-    alt: "Aqua Astra — Grow Together, ringed by its four promises: good seed, good feed, good medicine and good price, over an aerated shrimp pond at sunset.",
+    src: "/hero-grow-together-badges.webp",
+    width: 2506,
+    height: 1415,
+    alt: "Aqua Astra — Grow Together, ringed by its promises: good seed, good medicine and good price, over an aerated shrimp pond at sunset.",
     title: "Grow Together",
-    tags: ["Good Seed", "Good Feed", "Good Medicine", "Good Price"],
+    tags: ["Good Seed", "Good Medicine", "Good Price"],
   },
   harvest: {
     src: "/hero-farm-harvest-good-feed.webp",
@@ -252,7 +254,7 @@ export const steps = [
   },
   {
     step: "02",
-    title: "OCR extraction",
+    title: "Content Extraction",
     body: "Aqua Astra reads the parameters and their values straight off the page and structures them.",
   },
   {
@@ -390,10 +392,10 @@ export const faqs = [
 
 export const footerLinks = {
   product: [
-    { label: "How it works", href: "#how-it-works" },
-    { label: "Features", href: "#features" },
-    { label: "Roadmap", href: "#roadmap" },
-    { label: "FAQ", href: "#faq" },
+    { label: "How it works", href: "/#how-it-works" },
+    { label: "Features", href: "/#features" },
+    { label: "Roadmap", href: "/#roadmap" },
+    { label: "FAQ", href: "/#faq" },
   ],
   resources: [
     { label: "CAA", href: "https://www.caa.gov.in/" },
@@ -408,4 +410,182 @@ export const footerLinks = {
     { label: "Refund & Cancellation", href: "/refund-and-cancellation/" },
     { label: "Contact Us", href: "/contact-us/" },
   ],
+};
+
+/**
+ * Interface text that is not part of a section's own content: navigation labels,
+ * section headings, button text, accessibility labels. Placeholders in braces are
+ * filled in by the component.
+ */
+export const ui = {
+  skipToContent: "Skip to content",
+  header: {
+    homeAria: "Aqua Astra home",
+    primaryNav: "Primary",
+    toggleMenu: "Toggle navigation menu",
+    getApp: "Get the app",
+    languageLabel: "Language",
+  },
+  footer: {
+    product: "Product",
+    industryBodies: "Industry bodies",
+    legal: "Legal",
+    rights: "All rights reserved.",
+  },
+  hero: {
+    slides: {
+      artwork: "Aqua Astra — Grow Together",
+      harvest: "Harvest day on the farm",
+      pitch: "What Aqua Astra does",
+      steps: "How the app works",
+    },
+    carousel: {
+      region: "Aqua Astra hero",
+      slideOf: "{n} of {count} — {label}",
+      previous: "Previous slide",
+      next: "Next slide",
+      pause: "Pause slideshow",
+      play: "Play slideshow",
+    },
+  },
+  phone: {
+    showScreen: "Show {label} screen",
+    home: "Home",
+    reports: "Reports",
+    homeAlt:
+      "Aqua Astra home screen: pond T1's water analysis report with a health score of 91, Healthy, and a recent report summary of temperature, salinity and pH.",
+    reportsAlt:
+      "Aqua Astra reports screen: a lab report scored 78%, Good, with a ponds summary rating T1 at 91%, T2 at 74% and T3 at 88%.",
+  },
+  whatsapp: {
+    showCard: "Show report card {n}",
+    signature: "Aqua Astra",
+  },
+  sections: {
+    problemEyebrow: "The problem",
+    howItWorks: {
+      eyebrow: "How it works",
+      title: "From a photo of a report to a decision, in six steps",
+      lead: "The pipeline is deliberately boring: read the page, check it against science, then explain it. Every step is inspectable, so you can see why a recommendation was made.",
+    },
+    features: {
+      eyebrow: "Features",
+      title: "Everything the app does, honestly labelled",
+      lead: "Aqua Astra is shipping in stages. Rather than describe the finished product as if it already existed, each capability below carries its real status.",
+    },
+    audience: {
+      eyebrow: "Who it is for",
+      title: "Built around the farmer, useful to everyone near the pond",
+      lead: "The app is designed for someone with a phone, a report and no time — and it happens to be just as useful to the people advising them.",
+    },
+    roadmap: {
+      eyebrow: "Roadmap",
+      title: "Lab reports first. Whole-farm management next.",
+      lead: "Version one does one job properly: read a report, score it, explain it. This is the capability queued behind it.",
+      nextStep: "Next Step:",
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Questions worth answering up front",
+      lead: "Tap a question to see the answer.",
+    },
+  },
+  featureStatus: {
+    Available: "Available",
+    "In progress": "In progress",
+    Planned: "Planned",
+  },
+  getApp: {
+    live: "Now live on Google Play",
+    titleBefore: "Put the next report through",
+    brand: "Aqua Astra",
+    titleAfter: "",
+    lead: "The Android app is live on Google Play. Install it, upload your next lab report, and see your pond’s health score in minutes.",
+    getItOn: "Get it on",
+    comingSoonTo: "Coming soon to",
+    googlePlay: "Google Play",
+    appStore: "App Store",
+    qrAlt: "QR code that opens Aqua Astra on Google Play",
+    onComputer: "On a computer?",
+    scanToInstall: "Scan with your phone to install.",
+    chips: ["English & తెలుగు", "Reads PDFs and photos", "Health score in minutes"],
+    floatHealthLabel: "Pond health",
+    floatHealthValue: "Healthy",
+    floatLanguageLabel: "Language",
+    email: "Email",
+    phone: "Phone",
+    basedIn: "Based in",
+  },
+  about: {
+    metaTitle: "About",
+    metaDescription:
+      "Aqua Astra turns shrimp pond lab reports into clear health scores and advice, and builds software for the aqua industry.",
+    whoWeBuildFor: "Who we build for",
+    loopNote: "Prototype and Review repeat until the product fits.",
+    canBuild: "What we can build with you",
+    andMore: "and more…",
+    appHeading: "What the app does",
+    appLead: "Four things, done simply, so a report turns into a decision.",
+  },
+  contact: {
+    metaTitle: "Contact Us",
+    title: "Contact Us",
+    updated: "20 September 2026",
+    businessDetails: "Business details",
+    getInTouch: "Get in touch",
+    email: "Email:",
+    phone: "Phone:",
+    supportHours: "Support hours",
+    supportText:
+      "We aim to respond to all queries within 1–2 business days, Monday to Saturday.",
+  },
+  legal: {
+    lastUpdated: "Last updated:",
+  },
+};
+
+/** Words drawn inside the small SVG scenes on the home page. Technical tokens (pH, TAN, NH₃) stay as they are. */
+export const scenes = {
+  parameter: "PARAMETER",
+  value: "VALUE",
+  safe: "Safe",
+  toxic: "Toxic",
+  sameAmmonia: "Same ammonia, different pH",
+  adviceA: "Add lime",
+  adviceB: "Change water",
+  adviceC: "Just wait",
+  twoDays: "2 days",
+  report: "Report",
+  understood: "Understood",
+  inYourLanguage: "in your language",
+  pdfImage: "PDF/Image",
+  uploadShare: "Upload / Share",
+  salinity: "Salinity",
+  alkalinity: "Alkalinity",
+  ammonia: "Ammonia",
+  nextActions: "Next actions",
+  trend: "Trend over the cycle",
+  inSeconds: "in seconds",
+  pond: "Pond",
+  fine: "Fine",
+  watch: "Watch",
+  actNow: "Act now",
+  doThis: "DO THIS",
+  correctPh: "Correct the pH",
+  retest: "Re-test soon",
+  trackResult: "Track the result",
+  oct20: "20 Oct",
+  oct15: "15 Oct",
+  oct1: "1 Oct",
+  air: "Air",
+  rain: "Rain",
+  allFarms: "All farms, one place",
+  interpreted: "INTERPRETED",
+  phOk: "pH OK",
+  nh3High: "NH₃ high",
+  plainReport: "Plain-language report",
+  pondEveryReport: "Pond 3 · every report",
+  healthy: "Healthy",
+  warning: "Warning",
+  critical: "Critical",
 };

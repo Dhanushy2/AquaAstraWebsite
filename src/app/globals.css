@@ -332,3 +332,59 @@
     transform: scale(1.25) translate(-2%, -1%);
   }
 }
+
+/* How it works, step 2: the scan line rests mid-page, and sweeps top to bottom when motion is OK. */
+.scan-sweep {
+  transform: translateY(46px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scan-sweep {
+    animation: scan-sweep 2.8s ease-in-out infinite;
+  }
+}
+
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(92px);
+    opacity: 0;
+  }
+}
+
+/* FAQ: the answer pops in like an incoming reply. */
+@media (prefers-reduced-motion: no-preference) {
+  .faq-answer {
+    animation: faq-pop 0.3s ease-out both;
+  }
+}
+
+@keyframes faq-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Telugu pages: a Telugu-capable stack, and no tracking — letter-spacing pulls
+   conjuncts apart and breaks the script's joined forms. */
+:root:lang(te) {
+  --font-sans: "Noto Sans Telugu", "Nirmala UI", "Gautami", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+:lang(te) * {
+  letter-spacing: normal !important;
+}

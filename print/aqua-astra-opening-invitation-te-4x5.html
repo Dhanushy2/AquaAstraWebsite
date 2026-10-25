@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<title>Aqua Astra Enterprises — ప్రారంభోత్సవ ఆహ్వానం (4:5)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Ramabhadra&family=Suranna&display=swap" rel="stylesheet" />
+<style>
+  /* WhatsApp invitation in 4:5 (1080 × 1350), so the chat preview shows the whole card uncropped. */
+  :root {
+    --maroon: #7a1022;
+    --gold: #d99a1e;
+    --gold-light: #f8d77c;
+    --ink: #3b1a12;
+    --teal: #00695c;
+    --blue: #007acc;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #ddd; }
+  body { font-family: "Noto Sans Telugu", "Nirmala UI", sans-serif; color: var(--ink); }
+
+  .card {
+    position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background: radial-gradient(70% 50% at 70% 55%, #fffdf6 0%, transparent 70%), linear-gradient(#fff8ea, #fdf0d4);
+    display: grid; grid-template-columns: 470px 1fr;
+  }
+  .card::after {
+    content: ""; position: absolute; inset: 16px; pointer-events: none; z-index: 5;
+    border: 3px solid var(--gold); border-radius: 26px;
+    box-shadow: inset 0 0 0 9px rgba(217, 154, 30, .45);
+  }
+  .toran { position: absolute; left: 0; top: 0; width: 1080px; height: 110px; z-index: 6; }
+
+  /* Left: the temple panel. */
+  .temple {
+    position: relative; display: flex; flex-direction: column; align-items: center;
+    padding: 96px 30px 40px 46px;
+    background:
+      radial-gradient(70% 40% at 50% 38%, rgba(255, 196, 77, .55) 0%, rgba(255, 140, 40, .15) 50%, transparent 75%),
+      linear-gradient(175deg, #5a0815 0%, var(--maroon) 55%, #8f1724 100%);
+  }
+  .temple::before {
+    content: ""; position: absolute; inset: 0;
+    background: repeating-conic-gradient(from 0deg at 50% 38%, rgba(255, 215, 120, .10) 0deg 5deg, transparent 5deg 15deg);
+    -webkit-mask: radial-gradient(70% 50% at 50% 38%, #000 20%, transparent 75%);
+            mask: radial-gradient(70% 50% at 50% 38%, #000 20%, transparent 75%);
+  }
+  /* Gold edge between the panels. */
+  .temple::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 6px; background: linear-gradient(#f8d77c, #d99a1e, #f8d77c); }
+
+  .blessing {
+    position: relative; font-family: "Suranna", "Noto Sans Telugu", serif; font-size: 36px; line-height: 1.2;
+    color: var(--gold-light); text-shadow: 0 2px 10px rgba(0, 0, 0, .35); white-space: nowrap;
+  }
+  .arch {
+    position: relative; margin-top: 18px; width: 400px; height: 652px; padding: 9px; border-radius: 200px 200px 26px 26px;
+    background: linear-gradient(160deg, #fff1b8, #d99a1e 30%, #8a5a08 55%, #f3c95a 80%, #b07810);
+    box-shadow: 0 0 0 5px rgba(255, 233, 160, .35), 0 0 60px 14px rgba(255, 190, 70, .5), 0 22px 40px rgba(30, 0, 0, .4);
+  }
+  .arch img {
+    display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0;
+    border-radius: 191px 191px 18px 18px; border: 4px solid #fff6d8;
+  }
+  .ribbon {
+    position: relative; margin-top: 30px; padding: 10px 40px 12px; color: #5a0815; white-space: nowrap;
+    font-family: "Ramabhadra", "Noto Sans Telugu", sans-serif; font-size: 31px; line-height: 1.2;
+    background: linear-gradient(90deg, #e8b43a, #fbe39a 50%, #e8b43a);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 50%, 100% 100%, 0 100%, 20px 50%);
+  }
+  .art {
+    position: relative; margin-top: 30px; width: 400px; border-radius: 20px; padding: 5px;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold) 50%, #f3d27a);
+    box-shadow: 0 14px 30px rgba(20, 0, 0, .35);
+  }
+  .art img { display: block; width: 100%; border-radius: 16px; }
+
+  /* Right: the invitation. */
+  .invitation { position: relative; z-index: 2; min-width: 0; display: flex; flex-direction: column; padding: 112px 54px 44px 40px; }
+  .brand {
+    font-family: "Poppins", sans-serif; font-weight: 800; font-size: 54px; line-height: 1.08; letter-spacing: -.01em;
+    background: linear-gradient(90deg, var(--teal), #0e6e78 45%, var(--blue)); -webkit-background-clip: text; background-clip: text; color: transparent;
+    padding-bottom: 4px;
+  }
+  .brand sup { font-size: 20px; vertical-align: 30px; margin-left: 2px; }
+  .title {
+    margin-top: 8px; font-family: "Ramabhadra", "Noto Sans Telugu", sans-serif; font-size: 50px; line-height: 1.3;
+    color: var(--maroon); text-shadow: 0 2px 0 rgba(217, 154, 30, .35);
+  }
+  .rule { margin-top: 10px; display: flex; align-items: center; gap: 12px; color: var(--gold); }
+  .rule span { flex: 1; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); }
+  .invite { margin: 16px 0 0; font-size: 25px; line-height: 1.6; font-weight: 500; color: #4a2418; }
+  .invite b { color: var(--maroon); font-weight: 700; }
+
+  .details { margin-top: 22px; display: flex; flex-direction: column; gap: 15px; }
+  .detail {
+    display: flex; align-items: center; gap: 16px; padding: 11px 18px; border-radius: 20px;
+    background: #fff; border: 2px solid #efd7a2; box-shadow: 0 6px 16px rgba(120, 70, 20, .10);
+  }
+  .detail .ic {
+    flex: none; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; color: #fff;
+    background: linear-gradient(135deg, #9a1a26, var(--maroon)); box-shadow: 0 0 0 4px #fbe7b8;
+  }
+  .detail .ic svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .detail small { display: block; font-size: 19px; font-weight: 600; color: var(--gold); line-height: 1.25; }
+  .detail strong { display: block; font-size: 24px; font-weight: 700; color: var(--ink); line-height: 1.35; }
+  .detail strong em { font-style: normal; color: var(--maroon); }
+
+  .welcome { margin-top: 22px; text-align: center; font-family: "Suranna", "Noto Sans Telugu", serif; font-size: 36px; color: var(--maroon); line-height: 1.2; }
+
+  .host {
+    margin-top: 16px; border-radius: 24px; padding: 18px 22px; color: #fff; display: flex; align-items: center; gap: 18px;
+    background: linear-gradient(120deg, var(--teal) 0%, #0e6e78 45%, var(--blue) 100%);
+    box-shadow: 0 12px 26px rgba(0, 80, 110, .28);
+  }
+  .host .avatar { flex: none; width: 70px; height: 70px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .16); box-shadow: 0 0 0 5px rgba(255, 255, 255, .12); }
+  .host .avatar svg { width: 36px; height: 36px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .host small { display: block; font-size: 19px; font-weight: 600; color: #bdf3e8; }
+  .host b { display: block; font-size: 25px; font-weight: 800; line-height: 1.3; white-space: nowrap; }
+  .host .phone { display: flex; align-items: center; gap: 9px; margin-top: 4px; font-family: "Poppins", sans-serif; font-size: 31px; font-weight: 700; }
+  .host .phone i { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: #fff; }
+  .host .phone i svg { width: 21px; height: 21px; }
+  .host .phone i.call svg { fill: none; stroke: var(--teal); stroke-width: 2; stroke-linejoin: round; }
+  .host .phone i.wa svg { color: #25d366; }
+
+  .foot { margin-top: auto; padding-top: 12px; text-align: center; font-size: 19px; color: #8a6a4a; font-weight: 500; }
+  .foot b { font-family: "Poppins", sans-serif; color: var(--teal); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <svg class="toran" id="toran" viewBox="0 0 1080 110" aria-hidden="true"></svg>
+
+  <div class="temple">
+    <div class="blessing">॥ శ్రీ దుర్గాదేవి కృపతో ॥</div>
+    <div class="arch"><img src="assets/durga.png" alt="శ్రీ దుర్గాదేవి" /></div>
+    <div class="ribbon">విజయదశమి శుభ సందర్భంగా</div>
+    <div class="art"><img src="../public/hero-grow-together-badges.webp" alt="Aqua Astra — Grow Together" /></div>
+  </div>
+
+  <div class="invitation">
+    <div class="brand">Aqua Astra<sup>™</sup><br />Enterprises</div>
+    <div class="title">ప్రారంభోత్సవ ఆహ్వానం</div>
+    <div class="rule"><span></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.2 4.3 2.7 5.8 7 7-4.3 1.2-5.8 2.7-7 7-1.2-4.3-2.7-5.8-7-7 4.3-1.2 5.8-2.7 7-7z"/></svg>
+    <span style="transform:scaleX(-1)"></span></div>
+
+    <p class="invite">
+      మా <b>Aqua Astra Enterprises</b> ప్రారంభోత్సవానికి విచ్చేసి, మమ్మల్ని ఆశీర్వదించవలసిందిగా సాదరంగా ఆహ్వానిస్తున్నాము.
+    </p>
+
+    <div class="details">
+      <div class="detail">
+        <span class="ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+        <span><small>తేదీ</small><strong>20 అక్టోబర్ 2026, <em>మంగళవారం</em></strong></span>
+      </div>
+      <div class="detail">
+        <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+        <span><small>సమయం</small><strong>ఉదయం 10:00 నుండి<br /><em>మధ్యాహ్నం 1:00 వరకు</em></strong></span>
+      </div>
+      <div class="detail">
+        <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12.5" r="6.5"/><circle cx="12" cy="12.5" r="3.5"/><path d="M3 4v5.5M1.8 4v3.2a1.2 1.2 0 0 0 2.4 0V4M3 9.5V21M21 4c-1.4.6-2 2.4-2 4.5V13h2v8"/></svg></span>
+        <span><small>విందు</small><strong>మధ్యాహ్నం <em>1:00 గంటలకు</em></strong></span>
+      </div>
+      <div class="detail">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <span><small>వేదిక</small><strong>అర్తమూరు సెంటర్, బంటుమిల్లి మండలం,<br />కృష్ణా జిల్లా, ఆంధ్రప్రదేశ్</strong></span>
+      </div>
+    </div>
+
+    <div class="welcome">~ మీ రాకే మాకు ఆనందం ~</div>
+
+    <div class="host">
+      <span class="avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+      <span>
+        <small>ఆహ్వానించువారు</small>
+        <b>యార్లగడ్డ శ్రీనివాసరావు (YSR) - MA</b>
+        <span class="phone">
+          <i class="call"><svg viewBox="0 0 24 24"><path d="M5 4h3.5l1.7 4.4-2.2 1.4a11 11 0 0 0 6.2 6.2l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg></i>
+          <i class="wa"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg></i>
+          +91 70324 91345
+        </span>
+      </span>
+    </div>
+
+    <div class="foot"><b>Aqua Astra</b> · కలిసి ఎదుగుదాం · aquaastra.in</div>
+  </div>
+</div>
+
+<script>
+  // Marigold and mango-leaf toran across the top.
+  (function () {
+    const svg = document.getElementById('toran');
+    const ns = 'http://www.w3.org/2000/svg';
+    const el = (tag, attrs) => { const e = document.createElementNS(ns, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+    const defs = el('defs', {});
+    defs.innerHTML = `
+      <radialGradient id="mg1" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#ffe066"/><stop offset=".55" stop-color="#ffb21a"/><stop offset="1" stop-color="#e07a00"/></radialGradient>
+      <radialGradient id="mg2" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#ffd27a"/><stop offset=".55" stop-color="#ff8a1a"/><stop offset="1" stop-color="#c85400"/></radialGradient>
+      <linearGradient id="leaf" x1="0" x2="1"><stop offset="0" stop-color="#3f8f2a"/><stop offset=".5" stop-color="#67b83a"/><stop offset="1" stop-color="#2f7420"/></linearGradient>`;
+    svg.appendChild(defs);
+    const y = (x) => 20 + 9 * Math.sin((x / 1080) * Math.PI * 6) ** 2;
+    svg.appendChild(el('path', { d: Array.from({ length: 109 }, (_, i) => `${i ? 'L' : 'M'}${i * 10} ${y(i * 10).toFixed(1)}`).join(''), fill: 'none', stroke: '#8a5a08', 'stroke-width': 2 }));
+    const n = 22;
+    for (let i = 0; i < n; i++) {
+      const x = 24 + i * (1032 / (n - 1));
+      if (i < n - 1) {
+        const lx = x + 1032 / (n - 1) / 2, ly = y(lx);
+        const g = el('g', { transform: `translate(${lx.toFixed(1)} ${(ly + 6).toFixed(1)})` });
+        g.appendChild(el('path', { d: 'M0 0 C 11 16 9 42 0 56 C -9 42 -11 16 0 0Z', fill: 'url(#leaf)', stroke: '#24601a', 'stroke-width': 1 }));
+        g.appendChild(el('path', { d: 'M0 4 V52', stroke: '#c8e8a0', 'stroke-width': 1.2, opacity: .7 }));
+        svg.appendChild(g);
+      }
+      const r = 16, fill = i % 2 ? 'url(#mg2)' : 'url(#mg1)';
+      const g = el('g', { transform: `translate(${x.toFixed(1)} ${y(x).toFixed(1)})` });
+      for (let p = 0; p < 12; p++) {
+        const a = (p / 12) * Math.PI * 2;
+        g.appendChild(el('circle', { cx: (Math.cos(a) * r * .55).toFixed(2), cy: (Math.sin(a) * r * .55).toFixed(2), r: (r * .5).toFixed(2), fill, stroke: 'rgba(160,70,0,.35)', 'stroke-width': .8 }));
+      }
+      g.appendChild(el('circle', { r: r * .45, fill }));
+      g.appendChild(el('circle', { r: r * .18, fill: '#b85a00' }));
+      svg.appendChild(g);
+    }
+  })();
+</script>
+</body>
+</html>

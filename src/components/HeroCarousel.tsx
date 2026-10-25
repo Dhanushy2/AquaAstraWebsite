@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { ui } from "@/lib/content";
 
 /**
  * Full-width hero carousel: each slide is a whole hero panel, auto-advancing
@@ -13,7 +14,16 @@ const SLIDE_MS = 5000;
 
 export type HeroSlide = { label: string; content: ReactNode };
 
-export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
+export type CarouselLabels = typeof ui.hero.carousel;
+
+export default function HeroCarousel({
+  slides,
+  labels = ui.hero.carousel,
+}: {
+  slides: HeroSlide[];
+  /** Accessibility text; pass the Telugu set on Telugu pages. */
+  labels?: CarouselLabels;
+}) {
   const count = slides.length;
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(true);
@@ -42,7 +52,7 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     <div
       className="relative"
       aria-roledescription="carousel"
-      aria-label="Aqua Astra hero"
+      aria-label={labels.region}
       onPointerDown={() => setTouches((t) => t + 1)}
     >
       {/* Panels share one grid cell, so the stage is as tall as the tallest.
@@ -54,7 +64,10 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             key={slide.label}
             role="group"
             aria-roledescription="slide"
-            aria-label={`${i + 1} of ${count} — ${slide.label}`}
+            aria-label={labels.slideOf
+              .replace("{n}", String(i + 1))
+              .replace("{count}", String(count))
+              .replace("{label}", slide.label)}
             aria-hidden={i !== index}
             inert={i !== index}
             className={`relative col-start-1 row-start-1 ${
@@ -72,14 +85,14 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
           picture is centred, and near the top below lg, where it sits at
           1.5rem + 10svh down and is about 56vw tall. */}
       <ControlButton
-        label="Previous slide"
+        label={labels.previous}
         onClick={() => step(-1)}
         className="absolute left-2 top-[calc(1.5rem+10svh+28vw)] -translate-y-1/2 sm:left-4 lg:top-1/2"
       >
         <path d="M14.5 5.5 8 12l6.5 6.5" />
       </ControlButton>
       <ControlButton
-        label="Next slide"
+        label={labels.next}
         onClick={() => step(1)}
         className="absolute right-2 top-[calc(1.5rem+10svh+28vw)] -translate-y-1/2 sm:right-4 lg:top-1/2"
       >
@@ -88,7 +101,7 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
 
       <div className="absolute inset-x-0 bottom-5 flex justify-center">
         <ControlButton
-          label={playing ? "Pause slideshow" : "Play slideshow"}
+          label={playing ? labels.pause : labels.play}
           onClick={() => setPlaying((p) => !p)}
         >
           {playing ? (

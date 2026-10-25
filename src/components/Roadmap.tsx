@@ -1,18 +1,21 @@
 import { Section, SectionHeading } from "./Layout";
-import { roadmap } from "@/lib/content";
+import { getContent } from "@/lib/content-i18n";
+import type { Lang } from "@/lib/i18n";
 
-export default function Roadmap() {
+export default function Roadmap({ lang = "en" }: { lang?: Lang }) {
+  const { roadmap, ui } = getContent(lang);
+  const copy = ui.sections.roadmap;
   return (
     <Section id="roadmap" className="bg-brand-gradient">
       <SectionHeading
-        eyebrow="Roadmap"
+        eyebrow={copy.eyebrow}
         tone="light"
-        title="Lab reports first. Whole-farm management next."
-        lead="Version one does one job properly: read a report, score it, explain it. This is the capability queued behind it."
+        title={copy.title}
+        lead={copy.lead}
       />
 
       <div className="mt-12 flex flex-wrap items-center gap-4">
-        <p className="text-lg font-semibold text-white/90">Next Step:</p>
+        <p className="text-lg font-semibold text-white/90">{copy.nextStep}</p>
         <ul className="flex flex-wrap gap-3">
           {roadmap.map((item) => (
             <li

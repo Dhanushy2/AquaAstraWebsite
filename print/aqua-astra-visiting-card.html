@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aqua Astra Visiting Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ── Card setup ─────────────────────────────────────────────────────
+     Trim 88.9 × 50.8 mm (3.5 × 2 in) + 3 mm bleed each side = 94.9 × 56.8 mm.
+     Backgrounds run into the bleed; text and QR stay 4 mm inside the trim. */
+  @page { size: 94.9mm 56.8mm; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  :root {
+    --teal-deep: #00695c;
+    --teal-ink: #0e6e78;
+    --teal-brand: #20b09c;
+    --brand: #007acc;
+    --logo-green: #0f8a4f;
+    --logo-blue: #0376b5;
+    --mint: #bdf3e8;
+    --ink: #1e293b;
+    --gradient: linear-gradient(135deg, #00695c 0%, #0e6e78 45%, #007acc 100%);
+  }
+
+  html, body { margin: 0; padding: 0; }
+  body { background: #dfe6ec; font-family: "Poppins", "Noto Sans Telugu", sans-serif; color: var(--ink); }
+  .te { font-family: "Noto Sans Telugu", sans-serif; }
+
+  .card {
+    position: relative; width: 94.9mm; height: 56.8mm; overflow: hidden; background: #fff;
+    margin: 8mm auto; box-shadow: 0 6px 24px rgba(15, 40, 60, .18); break-after: page;
+  }
+  .card:last-child { break-after: auto; }
+  @media print {
+    body { background: none; }
+    .card { margin: 0; box-shadow: none; }
+  }
+  .abs { position: absolute; }
+  .icon { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ══ FRONT — the brand ═══════════════════════════════════════════════ */
+  .front { background: radial-gradient(70mm 46mm at 50% 34%, #ffffff 0%, #f3fbfd 55%, #e3f4f8 100%); }
+  .front .ripples { left: 0; top: 0; width: 100%; height: 100%; }
+  .front .logo {
+    left: 50%; top: 12.7mm; width: 30.5mm; transform: translateX(-50%);
+    mix-blend-mode: multiply;                 /* the logo's white ground melts into the card */
+  }
+  /* Ganesha, top centre, in the card gradient; sits in the open space right of the logo A peak. */
+  .front .ganesha { left: 50%; top: 4.8mm; height: 4.4mm; transform: translateX(-50%); }
+  /* Krishna playing the flute, top-right corner, matching the Ganesha. */
+  .front .krishna { right: 5.5mm; top: 4.8mm; height: 3.8mm; }
+  /* Sai Baba, top-left corner, matching the Ganesha and Krishna. */
+  .front .saibaba { left: 5.5mm; top: 4.8mm; height: 4mm; }
+  /* Company name above the logo (SVG text: gradient-clipped CSS text leaves boxes in PDFs). */
+  .front .co-top { left: 0; top: 9.3mm; width: 94.9mm; height: 3.2mm; overflow: visible; }
+  .gtext { font-family: "Poppins", sans-serif; font-weight: 700; fill: url(#g-wave); }
+  /* Promise badges, as on the flex: Good Seed (left), Good Medicine (right), Good Price (bottom, on the wave). */
+  .front .badge { text-align: center; }
+  .front .badge.l { left: 9.5mm; top: 16mm; width: 17mm; }
+  .front .badge.r { right: 9.5mm; top: 16mm; width: 17mm; }
+  .front .badge.b { left: 50%; top: 33.6mm; width: 17mm; transform: translateX(-50%); }
+  .front .badge .disc { width: 9.6mm; height: 9.6mm; margin: 0 auto; padding: .34mm; border-radius: 50%; background: linear-gradient(135deg, #00695c 0%, #0e6e78 45%, #007acc 100%); box-shadow: 0 0 0 .55mm rgba(32, 176, 156, .16); }
+  .front .badge .disc img { display: block; width: 100%; height: 100%; border-radius: 50%; border: .3mm solid #fff; box-sizing: border-box; background: #fff; }
+  .front .badge svg.lbl { display: block; width: 17mm; height: 2.6mm; margin-top: .6mm; overflow: visible; }
+  .front .badge.b .disc { width: 8.2mm; height: 8.2mm; box-shadow: 0 0 0 .55mm rgba(255, 255, 255, .22); }
+  .front .badge.b b { display: block; margin-top: .5mm; font-size: 4.6pt; font-weight: 700; line-height: 1.2; color: #fff; white-space: nowrap; }
+  .front .wave { left: 0; bottom: 0; width: 100%; height: 22.8mm; }
+  .front-call {
+    left: 7mm; right: 7mm; bottom: 8.4mm; display: flex; justify-content: center; align-items: center; gap: 1.4mm;
+    color: #fff; font-size: 7.4pt; font-weight: 700; letter-spacing: .03em; line-height: 1; white-space: nowrap;
+  }
+  .front-call i { display: grid; place-items: center; width: 3.4mm; height: 3.4mm; border-radius: 50%; background: #fff; color: var(--teal-ink); }
+  .front-call i svg { width: 2.1mm; height: 2.1mm; stroke-width: 2.2; }
+  .front-call small { display: inline-flex; align-items: center; gap: .7mm; font-size: 4.8pt; font-weight: 600; letter-spacing: .08em; color: var(--mint); }
+  /* The person, small, as the bottom line at the right. */
+  .front-name { right: 7mm; bottom: 4.5mm; text-align: right; color: #fff; font-size: 4.2pt; line-height: 1.2; white-space: nowrap; }
+  .front-name b { font-size: 4.2pt; font-weight: 600; letter-spacing: .01em; }
+  .front-name small { margin-left: .6mm; font-size: 3.9pt; font-weight: 500; letter-spacing: .04em; color: var(--mint); }
+  /* WhatsApp logo set beside the word WHATSAPP (front and back). */
+  svg.wa-s { width: 2.5mm; height: 2.5mm; color: #25d366; margin-left: .3mm; }
+
+  /* ══ BACK — name, QR codes, address ═════════════════════════════════════════════ */
+  .back { background: var(--gradient); color: #fff; }
+  .back .dots {
+    inset: 0; background-image: radial-gradient(rgba(255, 255, 255, .13) .22mm, transparent .3mm); background-size: 2.6mm 2.6mm;
+    -webkit-mask-image: linear-gradient(110deg, transparent 30%, #000 85%); mask-image: linear-gradient(110deg, transparent 30%, #000 85%);
+  }
+  .back .glow { right: -18mm; top: -22mm; width: 62mm; height: 62mm; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .2), transparent 70%); }
+  .back .prawn { right: 5mm; bottom: 4.6mm; width: 27mm; opacity: .17; transform: rotate(-5deg); }
+  .back .rings { right: 0; top: 0; width: 100%; height: 100%; }
+  .back .edge { left: 0; bottom: 0; width: 100%; height: 7mm; }
+
+  /* Name on one line, centred, with the tagline under it. */
+  .who { left: 7mm; right: 7mm; top: 7.2mm; text-align: center; }
+  .who h1 { margin: 0; font-size: 12pt; font-weight: 700; line-height: 1.15; letter-spacing: .005em; white-space: nowrap; }
+  .who h1 span { font-weight: 500; }
+  .who .tag { margin-top: 1.1mm; display: flex; justify-content: center; align-items: center; gap: 1.4mm; font-size: 5.6pt; color: #fff; }
+  .who .tag::before, .who .tag::after { content: ""; width: 5mm; height: .35mm; border-radius: 1mm; background: linear-gradient(90deg, #8ff0c4, #9ae6f2); }
+  .who .tag .te { font-size: 5.6pt; font-weight: 600; }
+  /* Tagline in the same mint-to-cyan gradient as the lines beside it; padded so Telugu marks are not clipped. */
+  .who .tag .tt { padding: .2em 0 .35em; background: linear-gradient(90deg, #8ff0c4, #9ae6f2); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* Two QR codes side by side: app download and WhatsApp chat. */
+  .qrs { left: 0; right: 0; top: 17.4mm; display: flex; justify-content: center; gap: 9mm; }
+  .qr { width: 20mm; text-align: center; }
+  .qr .tile { background: #fff; border-radius: 2.4mm; padding: 1.2mm; box-shadow: 0 1.4mm 3.4mm rgba(0, 30, 50, .3); }
+  .qr .tile img { display: block; width: 100%; }
+  .qr p { margin: 1.5mm -8mm 0; font-size: 5.4pt; font-weight: 600; color: #fff; display: flex; align-items: center; justify-content: center; gap: .9mm; white-space: nowrap; line-height: 1.2; }
+  .qr p svg { flex: none; width: 2.7mm; height: 2.7mm; }
+
+  .addr { left: 7mm; right: 7mm; bottom: 7.2mm; display: flex; justify-content: center; align-items: center; gap: 1.8mm; font-size: 5.9pt; line-height: 1.35; white-space: nowrap; }
+  .addr i { flex: none; display: grid; place-items: center; width: 3.8mm; height: 3.8mm; border-radius: 50%; background: #fff; color: var(--teal-ink); }
+  .addr i svg { width: 2.4mm; height: 2.4mm; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.7 4.4-2.2 1.4a11 11 0 0 0 6.2 6.2l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-feed" viewBox="0 0 24 24"><circle cx="8" cy="9" r="2.6"/><circle cx="15.5" cy="8" r="2.6"/><circle cx="11.5" cy="15" r="2.6"/><circle cx="18" cy="15.5" r="2"/><circle cx="5.5" cy="16" r="2"/></symbol>
+    <symbol id="i-medicine" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M12 9v7M8.5 12.5h7"/><path d="M8 5V3.5h8V5"/></symbol>
+    <symbol id="i-seed" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.6"/><g fill="currentColor" stroke="none"><circle cx="12" cy="12" r="1.4"/><circle cx="8.6" cy="10" r="1.1"/><circle cx="15.3" cy="9.6" r="1.1"/><circle cx="9.8" cy="15.2" r="1.1"/><circle cx="14.8" cy="14.9" r="1.1"/><circle cx="12" cy="7.2" r=".9"/><circle cx="12.2" cy="17.2" r=".9"/><circle cx="7" cy="13.3" r=".9"/><circle cx="17.1" cy="12.6" r=".9"/></g></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+    <linearGradient id="g-wave" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00695c"/><stop offset=".45" stop-color="#0e6e78"/><stop offset="1" stop-color="#007acc"/></linearGradient>
+    <linearGradient id="g-wave-back" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#20b09c"/><stop offset="1" stop-color="#2aa2f7"/></linearGradient>
+  </defs>
+</svg>
+
+<!-- ═══════════════════════════ FRONT ═══════════════════════════ -->
+<section class="card front">
+  <!-- A drop's ripple behind the logo. -->
+  <svg class="abs ripples" viewBox="0 0 94.9 56.8" aria-hidden="true">
+    <g fill="none" stroke="#0e6e78">
+      <ellipse cx="47.45" cy="23" rx="20" ry="12" stroke-opacity=".07" stroke-width=".3"/>
+      <ellipse cx="47.45" cy="23" rx="31" ry="18.5" stroke-opacity=".06" stroke-width=".3"/>
+      <ellipse cx="47.45" cy="23" rx="43" ry="25.5" stroke-opacity=".05" stroke-width=".3"/>
+    </g>
+  </svg>
+
+  <!-- Bubbles as SVG circles (CSS radial gradients can print wrong colours in PDFs). -->
+  <svg class="abs ripples" viewBox="0 0 94.9 56.8" aria-hidden="true">
+    <defs>
+      <radialGradient id="g-bubble" cx=".5" cy=".5" r=".5" fx=".32" fy=".3">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".2" stop-color="#ffffff"/>
+        <stop offset=".5" stop-color="#d6f0f9"/><stop offset="1" stop-color="#a9d3ea"/>
+      </radialGradient>
+    </defs>
+    <g fill="url(#g-bubble)" stroke="#8cc4e3" stroke-width=".12">
+      <circle cx="29.2" cy="15" r="1.2"/><circle cx="30.4" cy="18.6" r=".6"/><circle cx="29.6" cy="29.6" r=".8"/>
+      <circle cx="65.8" cy="14.2" r=".9"/><circle cx="64.8" cy="17.2" r=".5"/><circle cx="65.4" cy="29.2" r="1"/>
+      <circle cx="7.6" cy="30.6" r=".6"/><circle cx="87.4" cy="31" r=".7"/>
+    </g>
+  </svg>
+
+  <img class="abs saibaba" src="assets/saibaba-brand.png" alt="Sai Baba" />
+  <img class="abs ganesha" src="assets/ganesha-brand.png" alt="Lord Ganesha" />
+  <img class="abs krishna" src="assets/krishna-brand.png" alt="Lord Krishna playing the flute" />
+  <svg class="abs co-top" viewBox="0 0 94.9 3.2" aria-label="Aqua Astra Enterprises"><text class="gtext" x="47.45" y="1.6" text-anchor="middle" dominant-baseline="central" font-size="2.55" letter-spacing=".15">Aqua Astra Enterprises</text></svg>
+  <img class="abs logo" src="assets/logo-grow-together.png" alt="Aqua Astra — Grow Together" />
+
+  <!-- Layered water along the bottom. -->
+  <svg class="abs wave" viewBox="0 0 94.9 22.8" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 2.4C14 .5 27 3.1 43 1.6S73 0 94.9 1.3V22.8H0z" fill="url(#g-wave-back)" fill-opacity=".35"/>
+    <path d="M0 4.4C16 3.2 30 5 47 3.9S77 3.1 94.9 4.1V22.8H0z" fill="url(#g-wave)"/>
+    <path d="M0 4.4C16 3.2 30 5 47 3.9S77 3.1 94.9 4.1" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".22"/>
+    <path d="M0 21.2C18 20.2 34 21.8 52 20.8S80 20.1 94.9 21" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width=".18"/>
+  </svg>
+
+  <div class="abs badge l"><div class="disc"><img src="assets/promise-seed.svg" alt="Good Seed" /></div><svg class="lbl" viewBox="0 0 17 2.6" aria-label="Good Seed"><text class="gtext" x="8.5" y="1.3" text-anchor="middle" dominant-baseline="central" font-size="1.75">Good Seed</text></svg></div>
+  <div class="abs badge r"><div class="disc"><img src="assets/promise-medicine.png" alt="Good Medicine" /></div><svg class="lbl" viewBox="0 0 17 2.6" aria-label="Good Medicine"><text class="gtext" x="8.5" y="1.3" text-anchor="middle" dominant-baseline="central" font-size="1.75">Good Medicine</text></svg></div>
+  <div class="abs badge b"><div class="disc"><img src="assets/promise-price.png" alt="Good Price" /></div><b>Good Price</b></div>
+
+  <div class="abs front-call"><i><svg class="icon"><use href="#i-phone"/></svg></i>+91 79894 67777<small>CALL ·<svg class="wa-s"><use href="#i-wa"/></svg>WHATSAPP</small></div>
+  <div class="abs front-name"><b>Yarlagadda Srinivasa Rao</b><small>(YSR) - MA</small></div>
+</section>
+
+<!-- ═══════════════════════════ BACK ═══════════════════════════ -->
+<section class="card back">
+  <span class="abs dots"></span>
+  <span class="abs glow"></span>
+  <!-- Ripples spreading from between the QR codes. -->
+  <svg class="abs rings" viewBox="0 0 94.9 56.8" aria-hidden="true">
+    <g fill="none" stroke="#fff">
+      <circle cx="47.45" cy="27" r="17" stroke-opacity=".1" stroke-width=".25"/>
+      <circle cx="47.45" cy="27" r="24" stroke-opacity=".08" stroke-width=".25" stroke-dasharray=".8 .9"/>
+      <circle cx="47.45" cy="27" r="32" stroke-opacity=".06" stroke-width=".25"/>
+      <circle cx="47.45" cy="27" r="41" stroke-opacity=".045" stroke-width=".25"/>
+    </g>
+  </svg>
+  <img class="abs prawn" src="assets/prawn-white.png" alt="" />
+  <svg class="abs edge" viewBox="0 0 94.9 7" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 3.4C16 1.6 30 4.6 47 2.9S77 1.4 94.9 3.1V7H0z" fill="#fff" fill-opacity=".08"/>
+    <path d="M0 3.4C16 1.6 30 4.6 47 2.9S77 1.4 94.9 3.1" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width=".2"/>
+  </svg>
+
+  <div class="abs who">
+    <h1>Aqua Astra <span>Enterprises LLP</span></h1>
+    <div class="tag"><span class="tt">Grow Together · <span class="te">కలిసి ఎదుగుదాం</span></span></div>
+  </div>
+
+  <div class="abs qrs">
+    <div class="qr">
+      <div class="tile"><img src="assets/qr-playstore.svg" alt="QR code: Aqua Astra app on Google Play" /></div>
+      <p><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285f4" d="M3.6 2.2 13.4 12l-9.8 9.8c-.3-.2-.5-.6-.5-1.1V3.3c0-.5.2-.9.5-1.1Z"/><path fill="#34a853" d="M3.6 2.2c.3-.2.8-.2 1.3.1l11.5 6.6-3 3.1Z"/><path fill="#fbbc04" d="m16.4 8.9 3.6 2.1c.8.4.8 1.6 0 2l-3.6 2.1-3-3.1Z"/><path fill="#ea4335" d="m13.4 12 3 3.1-11.5 6.6c-.5.3-1 .3-1.3.1Z"/></svg>Download the App</p>
+    </div>
+    <div class="qr">
+      <div class="tile"><img src="assets/qr-whatsapp.svg" alt="QR code: WhatsApp +91 79894 67777" /></div>
+      <p><svg viewBox="0 0 24 24" style="color:#25d366" aria-hidden="true"><use href="#i-wa"/></svg>Chat on WhatsApp</p>
+    </div>
+  </div>
+
+  <div class="abs addr"><i><svg class="icon"><use href="#i-pin"/></svg></i><div>6-137, 1st Floor, Arthamuru, Bantumilli,<br />Krishna District, Andhra Pradesh 521369</div></div>
+</section>
+
+</body>
+</html>

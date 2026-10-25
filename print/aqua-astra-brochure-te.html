@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aqua Astra Brochure Telugu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ── A4 print setup ─────────────────────────────────────────────── */
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  :root {
+    --teal-deep: #00695c;
+    --teal-ink: #0e6e78;
+    --teal-brand: #20b09c;
+    --brand: #007acc;
+    --brand-dark: #0a4f7e;
+    --ink: #1e293b;
+    --muted: #5b6b80;
+    --faint: #94a3b8;
+    --hairline: #e2e8f0;
+    --canvas: #f4f8fa;
+    --amber: #f59e0b;
+    --violet: #7c3aed;
+    --cyan: #0891b2;
+    --green: #059669;
+    --red: #dc2626;
+    --gradient: linear-gradient(135deg, #00695c 0%, #0e6e78 45%, #007acc 100%);
+  }
+
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #dfe6ec;
+    color: var(--ink);
+    font-family: "Segoe UI", "Noto Sans Telugu", "Nirmala UI", system-ui, sans-serif;
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+
+  .page {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    margin: 8mm auto;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 30px rgba(15, 40, 60, 0.18);
+    break-after: page;
+  }
+  .page:last-child { break-after: auto; }
+  @media print {
+    body { background: none; }
+    .page { margin: 0; box-shadow: none; }
+  }
+
+  h1, h2, h3, .display { font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; margin: 0; letter-spacing: -0.01em; }
+  p { margin: 0; }
+  .te { font-family: "Noto Sans Telugu", "Nirmala UI", sans-serif; }
+
+  .eyebrow {
+    font-size: 7.5pt; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-ink);
+  }
+
+  /* ── Shared page chrome ─────────────────────────────────────────── */
+  .topbar {
+    position: absolute; inset: 0 0 auto 0; height: 16mm; padding: 0 14mm;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .brand { display: flex; align-items: center; gap: 2.4mm; }
+  .brand img { height: 10mm; width: auto; }
+  .brand b { font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 12pt; font-weight: 600; color: var(--ink); }
+  .brand b .aqua { color: #0f8a4f; }
+  .brand b .astra { color: #0376b5; }
+  .topbar .tag {
+    font-size: 7.5pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #fff;
+    background: linear-gradient(135deg, #12466f 0%, #0a63a3 50%, #007acc 100%); padding: 1.4mm 3.6mm; border-radius: 99px;
+  }
+
+  .footer {
+    position: absolute; inset: auto 14mm 6mm 14mm; height: 7mm;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 7.5pt; color: var(--faint); border-top: 1px solid var(--hairline); padding-top: 2mm;
+  }
+  .footer b { color: var(--teal-ink); font-weight: 600; }
+  .footer .aqua { color: #0f8a4f; }
+  .footer .astra { color: #0376b5; }
+  .footer b.ink { color: #000; }
+
+  .icon { width: 5.2mm; height: 5.2mm; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ══ PAGE 1 — About Aqua Astra ════════════════════════════════════ */
+  .cover-band {
+    position: absolute; inset: 0 0 auto 0; height: 74mm; background: var(--gradient); color: #fff;
+    padding: 9mm 14mm 0;
+  }
+  .cover-band::after {             /* soft light, top right */
+    content: ""; position: absolute; right: -30mm; top: -40mm; width: 120mm; height: 120mm; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255,255,255,0.22), transparent 70%);
+  }
+  .cover-band .wave { position: absolute; left: 0; bottom: -1px; width: 100%; height: 16mm; }
+  .cover-top { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .cover-top .brand b { color: #fff; font-size: 14pt; }
+  .cover-top .brand b span { color: #bdf3e8; }
+  /* The full-colour logo sits on a white badge so its greens and blues read on the teal band. */
+  .cover-top .logo-badge {
+    display: block; padding: 0.8mm 1.2mm; border-radius: 2.8mm; background: #fff; line-height: 0;
+    box-shadow: 0 4px 14px rgba(0, 40, 60, 0.25);
+  }
+  .cover-top .logo-badge img { height: 11mm; width: auto; display: block; }
+  .cover-top .brand { gap: 3.4mm; }
+  .cover-top .site { font-size: 9pt; font-weight: 600; opacity: .9; }
+  .cover-title { position: relative; z-index: 1; text-align: center; }
+  .cover-title .kicker {
+    display: inline-block; font-size: 8pt; font-weight: 600; letter-spacing: .06em;
+    padding: 1.3mm 3.6mm; border-radius: 99px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3);
+  }
+  .cover-title h1 { font-size: 36pt; line-height: 1.3; padding-bottom: 1mm; margin-top: -2mm; font-weight: 700; color: #fff; }
+  .cover-title .tm { font-size: .24em; font-weight: 600; vertical-align: top; position: relative; top: .7em; margin-left: .08em; }
+  .cover-title h1 em { font-style: normal; color: #bdf3e8; }
+  .cover-title p { margin-top: 3mm; font-size: 11pt; max-width: 125mm; color: rgba(255,255,255,.86); }
+
+  .artwork {
+    position: absolute; left: 37mm; right: 37mm; top: 47mm; height: 78.6mm;
+    border-radius: 6mm; overflow: hidden; border: 1.6mm solid #fff;
+    box-shadow: 0 10px 30px rgba(0, 60, 80, 0.28);
+  }
+  .artwork img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Stage with the artwork's exact aspect (3340 × 1884), cover-fitted like object-fit: cover,
+     so badges can be placed in % of the original image coordinates. */
+  .artwork .art-stage { position: absolute; top: 0; left: 50%; height: 100%; aspect-ratio: 3340 / 1884; transform: translateX(-50%); }
+  /* Promise badge over an artwork node: anchored at the node centre (left %, top % = centre − 215 px). */
+  .artwork .pbadge { position: absolute; width: 14.97%; transform: translateX(-50%); }
+  .artwork .pbadge .disc { width: 86%; aspect-ratio: 1; margin: 0 auto; padding: 4.2%; border-radius: 50%; position: relative; z-index: 1;
+    background: linear-gradient(135deg, #00695c 0%, #0e6e78 45%, #007acc 100%);
+    box-shadow: 0 0 0 .75mm rgba(255, 255, 255, .45), 0 .8mm 2.4mm rgba(0, 50, 80, .3); }
+  .artwork .pbadge .disc img { width: 100%; height: 100%; border-radius: 50%; border: .55mm solid #fff; box-sizing: border-box; background: #fff; }
+  .artwork .pbadge svg.pill { display: block; width: 100%; aspect-ratio: 500 / 92; margin-top: 1.5%; overflow: visible; filter: drop-shadow(0 .4mm .9mm rgba(0, 50, 80, .25)); }
+  .artwork .pbadge .pill text { font-family: "Poppins", "Segoe UI", sans-serif; font-weight: 700; fill: url(#g-pill-text); }
+
+  .about { position: absolute; left: 14mm; right: 14mm; top: 143mm; display: grid; grid-template-columns: 1fr; gap: 11mm; }
+  /* "About": black on the cover's mint — the reverse of the mint-on-teal title. */
+  .about-pill {
+    display: inline-block; padding: .9mm 2.6mm; margin-right: 1mm; border-radius: 99px;
+    background: #bdf2e7; color: #000; letter-spacing: .02em; text-transform: none; font-size: 8.6pt;
+  }
+  .about h2 { font-size: 17pt; font-weight: 700; margin-top: 1.8mm; }
+  .about .copy p { margin-top: 2.6mm; color: var(--muted); font-size: 10.4pt; line-height: 1.5; }
+  .about .copy p strong { color: var(--ink); }
+
+  .promises { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 3.6mm; }
+  .promise {
+    display: flex; align-items: center; gap: 4.4mm; padding: 6.4mm 5.4mm; border-radius: 4mm;
+    background: var(--canvas); border: 1px solid var(--hairline);
+  }
+  .promise .dot {
+    flex: none; width: 13mm; height: 13mm; border-radius: 3.4mm; display: grid; place-items: center; color: #fff;
+    font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-weight: 700; font-size: 18pt;
+  }
+  .promise .dot .icon { width: 7mm; height: 7mm; }
+  .promise b { display: block; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-weight: 600; font-size: 12.5pt; line-height: 1.2; }
+  
+  .promise small { display: block; margin-top: .8mm; font-size: 9pt; color: var(--muted); }
+
+
+  .callbar {
+    position: absolute; left: 40mm; right: 40mm; top: 258mm; height: 21mm; border-radius: 4mm; overflow: hidden;
+    background: var(--gradient); color: #fff; padding: 0 2.6mm 0 4.6mm;
+    display: flex; align-items: center; justify-content: space-between; gap: 5mm;
+  }
+  .callbar::after {
+    content: ""; position: absolute; right: 30mm; top: -26mm; width: 70mm; height: 70mm; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255,255,255,.16), transparent 70%);
+  }
+  .callbar .call { display: flex; align-items: center; gap: 3.4mm; position: relative; z-index: 1; }
+  .callbar .ring {
+    flex: none; width: 11mm; height: 11mm; border-radius: 50%; display: grid; place-items: center;
+    background: #fff; color: var(--teal-deep); box-shadow: 0 0 0 1.6mm rgba(255,255,255,.18);
+  }
+  .callbar .ring { position: relative; }
+  .callbar .ring .icon { width: 5.6mm; height: 5.6mm; }
+  /* WhatsApp logo next to the word WhatsApp. */
+  .callbar .wa-inline {
+    display: inline-grid; place-items: center; width: 4.4mm; height: 4.4mm; border-radius: 50%;
+    background: #25d366; vertical-align: -1.1mm; margin-right: 1.2mm;
+  }
+  .callbar .wa-inline svg { width: 3mm; height: 3mm; }
+  .callbar .label { font-size: 6.6pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #bdf2e7; }
+  .callbar .number { font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 16pt; font-weight: 700; line-height: 1.1; letter-spacing: .01em; }
+  .callbar .scan { display: flex; align-items: center; gap: 3mm; position: relative; z-index: 1; }
+  .callbar .scan p { text-align: right; font-size: 7.2pt; line-height: 1.35; color: rgba(255,255,255,.85); }
+  .callbar .scan p b { display: block; color: #fff; font-size: 8pt; }
+  .callbar .qr-tile { background: #fff; border-radius: 2.4mm; padding: 1.1mm; }
+  .callbar .qr-tile img { width: 16.5mm; height: 16.5mm; display: block; }
+
+  /* ══ PAGE 2 — About the App ═══════════════════════════════════════ */
+  .p2-head { position: absolute; left: 14mm; right: 14mm; top: 24mm; }
+  .p2-head h1 { font-size: 21pt; font-weight: 700; line-height: 1.12; margin-top: 2mm; }
+  .p2-head h1 span { background: linear-gradient(90deg, var(--teal-deep), var(--brand)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .p2-head p { margin-top: 3mm; color: var(--muted); font-size: 9.8pt; max-width: 165mm; }
+
+
+  .showcase { position: absolute; left: 14mm; right: 14mm; top: 70mm; height: 98mm; }
+  .showcase::before {
+    content: ""; position: absolute; left: 50%; top: 50%; width: 120mm; height: 92mm; transform: translate(-50%, -50%);
+    border-radius: 50%; background: radial-gradient(closest-side, rgba(32,176,156,.20), rgba(0,122,204,.08) 60%, transparent 75%);
+  }
+  .phone {
+    position: absolute; width: 44mm; border-radius: 6.5mm; background: #0f172a; padding: 1.4mm;
+    box-shadow: 0 12px 28px rgba(15, 30, 50, 0.32);
+  }
+  .phone .screen { position: relative; border-radius: 5.2mm; overflow: hidden; background: #f1f5f9; aspect-ratio: 9 / 16; }
+  .phone .screen::after {
+    content: ""; position: absolute; left: 50%; top: .7mm; width: 5.6mm; height: 1.4mm; border-radius: 99px;
+    transform: translateX(-50%); background: #0f172a;
+  }
+  .phone .screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .phone.home { left: calc(50% - 41mm); top: 8mm; width: 38mm; }
+  .phone.reports { left: calc(50% + 3mm); top: 8mm; width: 38mm; }
+
+  .callout { position: absolute; width: 44mm; }
+  .callout .num {
+    display: inline-grid; place-items: center; width: 5.4mm; height: 5.4mm; border-radius: 50%; color: #fff;
+    font-size: 7.5pt; font-weight: 700; background: var(--gradient); margin-bottom: 1.2mm;
+  }
+  .callout b { display: block; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 9.2pt; font-weight: 600; }
+  .callout p { font-size: 7.9pt; color: var(--muted); margin-top: .6mm; }
+  .callout.l { left: 0; text-align: right; }
+  .callout.r { right: 0; }
+  .callout.l .line, .callout.r .line { position: absolute; top: 2.7mm; width: 4mm; border-top: 1.4px dashed #9fb7c5; }
+  .callout.l .line { right: -5mm; }
+  .callout.r .line { left: -5mm; }
+
+  .feat-head { position: absolute; left: 14mm; right: 14mm; top: 160mm; display: flex; align-items: baseline; gap: 3mm; }
+  .feat-head h2 { font-size: 14pt; font-weight: 700; }
+  .feat-head span { font-size: 8.4pt; color: var(--muted); }
+  .features { position: absolute; left: 14mm; right: 14mm; top: 172mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+  .feature {
+    position: relative; overflow: hidden; border-radius: 4mm; padding: 5.2mm 4mm 4.6mm; display: flex; gap: 3mm;
+    background: linear-gradient(160deg, var(--tint) 0%, #fff 62%); border: 1px solid var(--line); border-top: 1.1mm solid var(--c1);
+  }
+  .feature .num {
+    position: absolute; right: 2.4mm; bottom: -2.6mm; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 30pt; font-weight: 700;
+    color: var(--c1); opacity: .09; line-height: 1;
+  }
+  .feature .ic {
+    flex: none; width: 10mm; height: 10mm; border-radius: 3mm; display: grid; place-items: center; color: #fff;
+    background: linear-gradient(135deg, var(--c1), var(--c2)); box-shadow: 0 2.4mm 4.6mm -1.6mm var(--c1);
+  }
+  .feature .ic .icon { width: 5.4mm; height: 5.4mm; }
+  .feature b { position: relative; display: block; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 9.2pt; font-weight: 600; line-height: 1.25; color: var(--c1); }
+  .feature p { position: relative; font-size: 7.7pt; color: var(--muted); margin-top: .8mm; line-height: 1.38; }
+
+  .audience {
+    position: absolute; left: 14mm; right: 14mm; top: 244mm; height: 20mm; border-radius: 4.4mm; padding: 0 5mm; color: #fff;
+    display: flex; align-items: center; justify-content: space-between; gap: 2mm;
+    background: radial-gradient(60mm 30mm at 82% 10%, rgba(255,255,255,.18), transparent 70%), var(--gradient);
+  }
+  .audience .label { font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 9.6pt; font-weight: 700; white-space: nowrap; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 1.6mm; padding: 1mm 2.8mm 1mm 1mm; border-radius: 99px; white-space: nowrap;
+    font-size: 7.6pt; font-weight: 600; color: #fff; background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.3);
+  }
+  .chip i { display: grid; place-items: center; width: 6.4mm; height: 6.4mm; border-radius: 50%; background: #fff; color: var(--teal-ink); }
+  .chip i .icon { width: 4mm; height: 4mm; }
+  .chip i .icon image { }
+
+  /* ══ PAGE 3 — How it works ════════════════════════════════════════ */
+  .p3-head { position: absolute; left: 14mm; right: 14mm; top: 22mm; text-align: center; }
+  .p3-head h1 { font-size: 22pt; font-weight: 700; margin-top: 2mm; }
+  .p3-head p { margin: 2.4mm auto 0; color: var(--muted); font-size: 9.8pt; max-width: 150mm; }
+
+  .flow { position: absolute; left: 14mm; right: 14mm; top: 58mm; display: grid; grid-template-columns: 1fr 8mm 1fr 8mm 1fr; align-items: start; }
+  .flow-step { text-align: center; }
+  .flow-visual { height: 80mm; display: grid; place-items: center; position: relative; }
+  .flow-arrow { height: 80mm; display: grid; place-items: center; color: var(--teal-ink); }
+  .flow-arrow svg { width: 8mm; height: 8mm; }
+  .flow-step .badge {
+    display: inline-flex; align-items: center; gap: 1.8mm; margin-top: 3mm;
+    font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 10.5pt; font-weight: 600;
+  }
+  .flow-step .badge span {
+    display: grid; place-items: center; width: 6.4mm; height: 6.4mm; border-radius: 50%; color: #fff; font-size: 8.5pt; font-weight: 700;
+  }
+  .flow-step p { font-size: 8.2pt; color: var(--muted); margin: 1.2mm auto 0; max-width: 52mm; }
+
+  .mini-phone { width: 40mm; border-radius: 6mm; background: #0f172a; padding: 1.3mm; box-shadow: 0 10px 24px rgba(15,30,50,.3); position: relative; }
+  .mini-phone .screen { border-radius: 4.8mm; overflow: hidden; }
+  .mini-phone.app .screen { position: relative; }
+  .mini-phone .screen img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top; }
+  .mini-phone.upload .screen, .mini-phone.app .screen { aspect-ratio: 9 / 18; }
+  .mini-phone.upload { transform: rotate(-3deg); }
+      .mini-phone.app { transform: rotate(2deg); }
+  /* Ring around the Upload Report button, about 52–57% down the screen. */
+  .tap-ring {
+    position: absolute; left: 7%; right: 7%; top: 55.7%; height: 6.9%; border-radius: 99px;
+    border: 2px solid #fbbf24; box-shadow: 0 0 0 3px rgba(251,191,36,.35), 0 0 12px rgba(251,191,36,.8);
+  }
+  .tap-hand { position: absolute; right: 18%; top: 58.6%; width: 8mm; height: 8mm; filter: drop-shadow(0 2px 3px rgba(0,0,0,.35)); }
+
+  .chat {
+    width: 40mm; box-sizing: border-box; aspect-ratio: 40 / 77.4; border-radius: 6mm; overflow: hidden; background: #efeae2;
+    box-shadow: 0 10px 24px rgba(15,30,50,.3); border: 1.3mm solid #0f172a; transform: rotate(-2deg);
+    display: flex; flex-direction: column; text-align: left;
+  }
+  .chat-body { flex: 1; }
+  .sbar {
+    position: absolute; left: 0; right: 0; top: 0; z-index: 3; height: 4mm; padding: 0 3.2mm; display: flex; align-items: center; gap: .9mm;
+    font-family: "Roboto", "Segoe UI", sans-serif; font-size: 5.4pt; font-weight: 500; color: #1f2937;
+  }
+  .chat .sbar { position: static; background: #fff; flex: none; height: 4.4mm; }
+  .sbar .t { margin-right: .4mm; }
+  .sbar svg { width: 2.4mm; height: 2.4mm; }
+  .sbar .sp { flex: 1; }
+  .sbar .bat { display: inline-grid; place-items: center; min-width: 3.6mm; height: 2.3mm; border-radius: 99px; background: #1f2937; color: #fff; font-size: 4.4pt; font-weight: 700; }
+  .chat-bar { display: flex; align-items: center; gap: 1.4mm; padding: 1.6mm 2mm 2.4mm; }
+  .chat-bar span { flex: 1; height: 5.4mm; border-radius: 99px; background: #fff; font-size: 6pt; color: var(--faint); line-height: 5.4mm; padding-left: 2.4mm; }
+  .chat-bar i { display: grid; place-items: center; width: 5.4mm; height: 5.4mm; border-radius: 50%; background: #00a884; }
+  .chat-bar i svg { width: 2.9mm; height: 2.9mm; margin-left: .3mm; }
+  .chat-head { display: flex; align-items: center; gap: 1.6mm; background: #fff; padding: .6mm 2.2mm 2mm; }
+  .chat-head img { width: 6mm; height: 6mm; border-radius: 50%; }
+  .chat-head b { font-size: 6.6pt; font-weight: 600; white-space: nowrap; }
+  .chat-head b { display: inline-flex; align-items: center; }
+  .chat-head .wa-badge { display: inline-grid; place-items: center; margin-left: 1mm; }
+  .chat-head .wa-badge svg { width: 3.8mm; height: 3.8mm; }
+  .chat-head .wa-badge svg path { fill: #25d366; }
+  .chat-body { padding: 2.4mm; display: grid; gap: 2mm; }
+  .bubble { background: #fff; border-radius: 2.6mm; border-top-left-radius: 0; padding: 1mm; box-shadow: 0 1px 1px rgba(0,0,0,.08); }
+  .bubble img { width: 100%; display: block; border-radius: 2mm; }
+  .bubble p { font-size: 6.6pt; color: #334155; padding: 1mm 1mm .4mm; line-height: 1.35; }
+  .bubble small { display: block; text-align: right; font-size: 5.6pt; color: var(--faint); padding: 0 1mm; }
+
+  .engine { position: absolute; left: 14mm; right: 14mm; top: 168mm; }
+  .engine-head { display: flex; align-items: baseline; justify-content: space-between; }
+  .engine-head h2 { font-size: 12.5pt; font-weight: 600; }
+  .engine-head span { font-size: 8pt; color: var(--muted); }
+  .engine-grid { margin-top: 3mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; counter-reset: s; }
+  .eng { position: relative; border-radius: 3.6mm; padding: 2.6mm 3.2mm 2.6mm 12.6mm; background: var(--canvas); border: 1px solid var(--hairline); min-height: 18.5mm; }
+  .eng .n {
+    position: absolute; left: 3mm; top: 3mm; width: 7.4mm; height: 7.4mm; border-radius: 2.2mm; display: grid; place-items: center;
+    font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-weight: 700; font-size: 8.4pt; color: #fff; background: var(--gradient);
+  }
+  .eng b { display: block; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 8.8pt; font-weight: 600; }
+  .eng p { font-size: 7.5pt; color: var(--muted); margin-top: .6mm; line-height: 1.35; }
+
+  .good { position: absolute; left: 14mm; right: 14mm; top: 223mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .good div { display: flex; align-items: center; gap: 2.2mm; font-size: 8pt; color: var(--ink); font-weight: 600; }
+  .good svg { flex: none; width: 5.4mm; height: 5.4mm; padding: 1mm; border-radius: 50%; background: #ecfbf6; color: var(--green); }
+
+  .contact {
+    position: absolute; left: 14mm; right: 14mm; top: 234mm; height: 48mm; border-radius: 5mm; overflow: hidden; color: #fff;
+    background: var(--gradient); padding: 5mm 5.4mm; display: grid; grid-template-columns: 1fr auto; gap: 5mm; align-items: center;
+  }
+  .contact::after {
+    content: ""; position: absolute; right: -20mm; bottom: -30mm; width: 80mm; height: 80mm; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255,255,255,.16), transparent 70%);
+  }
+  .contact h2 { font-size: 14pt; font-weight: 700; }
+  .contact .sub { font-size: 8.6pt; color: rgba(255,255,255,.82); margin-top: 1mm; }
+  .contact ul { list-style: none; margin: 3mm 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.6mm 4mm; }
+  .contact li { display: flex; align-items: center; gap: 2mm; font-size: 8.4pt; }
+  .contact li svg { flex: none; width: 4.4mm; height: 4.4mm; }
+  .contact li.wide { grid-column: span 2; font-size: 7.8pt; color: rgba(255,255,255,.85); }
+  .qrs { display: flex; gap: 3.4mm; position: relative; z-index: 1; }
+  .qr { background: #fff; border-radius: 3mm; padding: 1.6mm; text-align: center; color: var(--ink); }
+  .qr img { width: 23mm; height: 23mm; display: block; }
+  .qr span { display: block; font-size: 6.8pt; font-weight: 700; margin-top: .8mm; letter-spacing: .04em; }
+
+  /* ══ PAGE 4 — Software for the Aqua Industry ══════════════════════ */
+  .sw-hero {
+    position: absolute; left: 0; right: 0; top: 0; height: 96mm; overflow: hidden; color: #fff;
+    background: linear-gradient(135deg, #12466f 0%, #0a63a3 50%, #007acc 100%); padding: 25mm 14mm 0;
+  }
+  .sw-hero::after {
+    content: ""; position: absolute; right: -24mm; top: -34mm; width: 96mm; height: 96mm; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255,255,255,.18), transparent 70%);
+  }
+  .sw-hero > * { position: relative; z-index: 1; }
+  .sw-hero .sw-brand { position: absolute; left: 0; right: 0; top: 7mm; z-index: 2; text-align: center; color: #fff; }
+  .sw-hero .sw-brand b { display: block; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 15pt; font-weight: 700; letter-spacing: .02em; line-height: 1.2; }
+  .sw-hero .sw-brand span {
+    display: flex; align-items: center; justify-content: center; gap: 3mm;
+    margin-top: .8mm; font-size: 8.6pt; letter-spacing: .03em; color: rgba(255,255,255,.8);
+  }
+  .sw-hero .sw-brand span::before, .sw-hero .sw-brand span::after {
+    content: ""; width: 12mm; height: .3mm; border-radius: 1mm; background: rgba(255,255,255,.55);
+  }
+  .sw-hero h1 { white-space: nowrap; font-size: 19pt; line-height: 1.4; padding-bottom: .6mm; font-weight: 700; margin-top: 0; }
+  .sw-hero p { margin-top: 2.4mm; font-size: 9pt; color: rgba(255,255,255,.86); white-space: nowrap; }
+  .sw-hero .copy { position: relative; z-index: 2; }
+  .sw-hero h1 .hl { color: #9ae6f2; }
+  /* Faint dot grid, fading in toward the illustration. */
+  .sw-hero .dots {
+    position: absolute; inset: 0; z-index: 0;
+    background-image: radial-gradient(rgba(255,255,255,.16) .32mm, transparent .4mm); background-size: 4mm 4mm;
+    -webkit-mask-image: linear-gradient(90deg, transparent 25%, #000 75%); mask-image: linear-gradient(90deg, transparent 25%, #000 75%);
+  }
+  .sw-hero .waves { position: absolute; left: 0; right: 0; bottom: 7mm; width: 100%; height: 16mm; z-index: 0; }
+  .sw-hero .edge { position: absolute; left: 0; bottom: -1px; width: 100%; height: 14mm; z-index: 3; }
+
+  /* The AI hub: a glowing core with orbiting nodes for what we build. */
+  .sw-art { position: absolute; right: 7mm; top: 37mm; width: 49.6mm; height: 49.6mm; z-index: 1; }
+  .sw-art .art-inner { position: relative; width: 62mm; height: 62mm; zoom: .8; }
+  .sw-art svg.orbit { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .sw-art .core {
+    position: absolute; left: 21mm; top: 21mm; width: 20mm; height: 20mm; border-radius: 50%; display: grid; place-items: center;
+    background: linear-gradient(135deg, #20b09c, #007acc); box-shadow: 0 0 0 1.6mm rgba(255,255,255,.9), 0 0 0 4.2mm rgba(255,255,255,.14), 0 0 14mm rgba(125, 211, 252, .55);
+  }
+  .sw-art .core svg { width: 11mm; height: 11mm; }
+  .sw-art .node {
+    position: absolute; width: 11mm; height: 11mm; border-radius: 50%; display: grid; place-items: center;
+    background: #fff; color: #0a63a3; box-shadow: 0 3px 10px rgba(0, 30, 60, .35);
+  }
+  .sw-art .node .icon { width: 6mm; height: 6mm; }
+  .sw-art .node.leap .icon { width: 7.6mm; height: 7.6mm; }
+  .sw-chips { display: flex; flex-wrap: wrap; gap: 2.4mm; margin-top: 7mm; }
+  .sw-chips span {
+    display: inline-flex; align-items: center; gap: 1.8mm; padding: 1mm 3.2mm 1mm 1mm; border-radius: 99px;
+    background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); font-size: 8.4pt; font-weight: 600;
+  }
+  .sw-chips i { display: grid; place-items: center; width: 5.6mm; height: 5.6mm; border-radius: 50%; background: #fff; color: #0a63a3; }
+  .sw-chips i .icon { width: 3.6mm; height: 3.6mm; }
+  /* Hatcheries: white dots in a white ring on brochure blue, like Good Seed on page 1. */
+  .sw-chips i.seed { background: #0376b5; color: #fff; }
+  /* Farms: a white prawn leaping from white waves, on brochure blue. */
+  .sw-chips i.leap { background: #0376b5; color: #fff; }
+  .sw-chips i.leap .icon { width: 4.8mm; height: 4.8mm; }
+  .sw-chips i.seed .icon { width: 5.2mm; height: 5.2mm; stroke-width: 1.6; }
+
+  .sw-journey-title {
+    position: absolute; left: 0; right: 0; top: 102mm; text-align: center; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif;
+    font-size: 18pt; font-weight: 700;
+  }
+  .sw-journey-title span {
+    background: linear-gradient(90deg, #d97706, #7c3aed, #0e7490, #059669);
+    -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 1mm;
+  }
+  .sw-flow { position: absolute; left: 14mm; right: 14mm; top: 120mm; height: 70mm; }
+  .sw-flow svg.links { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .sw-steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
+  .sw-step { text-align: center; }
+  .sw-tile {
+    position: relative; margin: 0 auto; width: 15mm; height: 15mm; border-radius: 4mm; display: grid; place-items: center;
+    color: #fff; box-shadow: 0 6px 14px rgba(15, 40, 70, .22);
+  }
+  .sw-tile .icon { width: 8mm; height: 8mm; }
+  .sw-tile.glow { box-shadow: 0 0 0 1.6mm rgba(253, 224, 71, .35), 0 0 9mm 2mm rgba(251, 191, 36, .55), 0 6px 14px rgba(15, 40, 70, .22); }
+  .sw-tile.glow .icon { width: 11mm; height: 11mm; }
+  .sw-tile em {
+    position: absolute; right: -2mm; top: -2mm; width: 5.4mm; height: 5.4mm; border-radius: 50%; display: grid; place-items: center;
+    font-style: normal; font-size: 7pt; font-weight: 700; color: #fff; background: #12466f; box-shadow: 0 0 0 .7mm #fff;
+  }
+  .sw-card {
+    margin-top: 8mm; border-radius: 3.6mm; padding: 3.6mm 3.4mm 3.8mm; background: var(--canvas); border: 1px solid var(--hairline);
+    border-top: 1.2mm solid var(--tone); min-height: 37mm;
+  }
+  .sw-card small { display: block; font-size: 6.8pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .sw-card b { display: block; margin-top: .6mm; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 12pt; font-weight: 700; color: var(--tone); }
+  .sw-card p { margin-top: 1.4mm; font-size: 8pt; color: var(--muted); line-height: 1.4; }
+
+  .sw-offers { position: absolute; left: 14mm; right: 14mm; top: 197mm; }
+  .sw-offers h2 { font-size: 13pt; font-weight: 700; }
+  .sw-offer-grid { margin-top: 3.4mm; display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; }
+  .sw-offer { border-radius: 3.6mm; padding: 3.4mm; background: #fff; border: 1px solid var(--hairline); box-shadow: 0 3px 10px rgba(15, 40, 70, .07); }
+  .sw-offer i {
+    display: grid; place-items: center; width: 9.4mm; height: 9.4mm; border-radius: 2.8mm; color: #fff;
+    background: linear-gradient(135deg, #0a63a3, #2aa2f7);
+  }
+  .sw-offer i .icon { width: 5.4mm; height: 5.4mm; }
+  .sw-offer i.leap .icon { width: 7mm; height: 7mm; }
+  .sw-offer p { margin-top: 2.6mm; font-size: 8.2pt; font-weight: 600; line-height: 1.35; color: var(--ink); }
+  .sw-offer.more { background: none; box-shadow: none; border: 1.4px dashed #9fb7c5; }
+  .sw-offer.more i { background: var(--canvas); color: #0a63a3; border: 1px solid var(--hairline); }
+
+  .sw-prompt {
+    position: absolute; left: 0; right: 0; top: 245mm; text-align: center;
+    font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 11pt; font-weight: 600; color: var(--ink);
+  }
+  .callbar.p4 { top: 256mm; background: linear-gradient(135deg, #12466f 0%, #0a63a3 50%, #007acc 100%); }
+
+  /* ══ Telugu edition ═══════════════════════════════════════════════
+     Telugu glyphs are taller and wider than Latin: open up line-heights,
+     drop the tracking and uppercase on small labels, and let one-line
+     English headings wrap. */
+  .eyebrow, .topbar .tag, .callbar .label, .sw-card small, .qr span { letter-spacing: 0; }
+  .eyebrow { font-size: 8.4pt; }
+  .topbar .tag { font-size: 8.4pt; }
+  .callbar .label { font-size: 7.6pt; text-transform: none; }
+  .callbar .scan p b { font-size: 8.4pt; }
+  .callbar .number, .callbar .scan p { white-space: nowrap; }
+  /* "WhatsApp" in WhatsApp green, with its logo beside it. */
+  .callbar .scan .wa-word { display: inline-flex; align-items: center; gap: .9mm; margin-top: .4mm; color: #25d366; font-weight: 700; font-size: 7.8pt; }
+  .callbar .scan .wa-word svg { width: 3.6mm; height: 3.6mm; }
+  .about h2 { font-size: 18pt; line-height: 1.4; }
+  .about .copy p { line-height: 1.6; }
+  .promise b { font-size: 13pt; line-height: 1.45; }
+  .promise small { font-size: 9.4pt; }
+  .sw-hero { padding-top: 24mm; }
+  .sw-hero .copy { max-width: 136mm; }
+  .sw-hero h1 { white-space: normal; font-size: 20pt; line-height: 1.45; }
+  .sw-hero p { white-space: normal; font-size: 9.6pt; line-height: 1.55; margin-top: 1.4mm; }
+  .sw-chips { margin-top: 4.4mm; }
+  .sw-journey-title { font-size: 19pt; line-height: 1.5; top: 100mm; }
+  .sw-card small { font-size: 7.6pt; text-transform: none; }
+  .sw-card b { font-size: 12.5pt; line-height: 1.45; }
+  .sw-card p { font-size: 8.2pt; line-height: 1.55; }
+  .sw-card { min-height: 39.5mm; }
+  .sw-offers { top: 190mm; }
+  .sw-offers h2 { font-size: 14pt; line-height: 1.45; }
+  .sw-offer p { font-size: 8.6pt; line-height: 1.5; }
+  .sw-prompt { font-size: 11.5pt; top: 244.5mm; }
+  .p2-head h1 { font-size: 21pt; line-height: 1.45; }
+  /* Gradient text paints only inside the span box; pad it so Telugu marks above
+     and below the line (e.g. the ్థ in అర్థమవుతుంది) are not clipped. */
+  .p2-head h1 span, .sw-journey-title span { padding: .15em 0 .35em; }
+  .p2-head p { font-size: 9.6pt; line-height: 1.6; }
+  .callout { width: 40mm; }
+  .callout b { font-size: 9.4pt; line-height: 1.4; }
+  .callout p { font-size: 7.8pt; line-height: 1.5; }
+  .callout.l .line { right: -4mm; width: 3mm; }
+  .callout.r .line { left: -4mm; width: 3mm; }
+  .feat-head h2 { font-size: 14.5pt; }
+  .feat-head span { font-size: 8.8pt; }
+  .feature { padding: 3.4mm 3.4mm 3.2mm; gap: 2.6mm; }
+  .feature .num { font-size: 24pt; }
+  .feature .ic { width: 8.6mm; height: 8.6mm; border-radius: 2.6mm; }
+  .feature .ic .icon { width: 4.6mm; height: 4.6mm; }
+  .feature b { font-size: 9pt; line-height: 1.4; }
+  .feature p { font-size: 7.6pt; line-height: 1.45; margin-top: .4mm; }
+  .audience .label { font-size: 10pt; }
+  /* Page 3: Google Play QR card, right of the Reports phone and above callout 3. */
+  .store {
+    position: absolute; left: 50%; transform: translateX(-50%); top: 58mm; display: flex; align-items: center; gap: 3.6mm; overflow: hidden;
+    padding: 2mm 2mm 2mm 4.4mm; border-radius: 4mm; background: var(--gradient); color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 60, 80, .24);
+  }
+  .store::after {                  /* soft light, top right — as on the call bars */
+    content: ""; position: absolute; right: 8mm; top: -22mm; width: 50mm; height: 50mm; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255,255,255,.16), transparent 70%);
+  }
+  .store > * { position: relative; z-index: 1; }
+  .store .gp { display: flex; align-items: center; gap: 1.8mm; font-family: "Poppins", sans-serif; font-size: 8pt; font-weight: 600; color: #fff; white-space: nowrap; }
+  .store .gp svg { width: 6.6mm; height: 6.6mm; padding: 1.15mm; border-radius: 50%; background: #fff; }
+  .store b { display: block; margin-top: 1.2mm; font-family: "Poppins", "Noto Sans Telugu", "Nirmala UI", sans-serif; font-size: 11pt; font-weight: 700; line-height: 1.4; white-space: nowrap; }
+  .store p { margin-top: .4mm; font-size: 7.6pt; line-height: 1.45; color: rgba(255,255,255,.86); white-space: nowrap; }
+  /* Download symbol in front of the card title. */
+  .store b { display: flex; align-items: center; gap: 1.6mm; margin-top: 2mm; }
+  .store b .dl { flex: none; display: grid; place-items: center; width: 5.4mm; height: 5.4mm; border-radius: 50%; background: #fff; box-shadow: 0 0 0 .9mm rgba(255,255,255,.18); }
+  .store b .dl svg { width: 3.4mm; height: 3.4mm; fill: none; stroke: #0e6e78; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .store .tile { background: #fff; border-radius: 2.6mm; padding: 1.2mm; }
+  .store .tile img { width: 22mm; height: 22mm; display: block; }
+  /* Below the QR card: bigger phones, set a little lower; the features and
+     the audience band below them are compacted to make room. */
+  .showcase { top: 86mm; height: 88mm; }
+  .phone.home { left: calc(50% - 46mm); width: 44mm; }
+  .phone.reports { left: calc(50% + 2mm); width: 44mm; }
+  .feat-head { top: 179mm; }
+  .feat-head h2 { font-size: 13pt; }
+  .features { top: 189mm; gap: 3mm; }
+  .audience { top: 243mm; height: 17mm; }
+  .chip { font-size: 8pt; }
+  .p3-head h1 { font-size: 22pt; line-height: 1.45; }
+  .p3-head p { font-size: 9.6pt; line-height: 1.6; }
+  .flow-step .badge { font-size: 11pt; }
+  .flow-step p { font-size: 8.4pt; line-height: 1.55; }
+  .bubble p { font-size: 6.4pt; line-height: 1.5; }
+  .engine { top: 165mm; }
+  .engine-head h2 { font-size: 13pt; }
+  .good { top: 225mm; }
+  .contact { top: 235mm; height: 47mm; }
+  .eng b { font-size: 9.2pt; line-height: 1.4; }
+  .eng p { font-size: 7.8pt; line-height: 1.5; }
+  .good div { font-size: 8.4pt; line-height: 1.4; }
+  .contact h2 { font-size: 15pt; line-height: 1.45; }
+  .contact .sub { font-size: 9pt; line-height: 1.5; }
+  /* WhatsApp QR label: WhatsApp green with its logo (deeper green so it reads on white). */
+  .qr span.wa { display: flex; justify-content: center; align-items: center; gap: .8mm; color: #1da851; }
+  .qr span.wa svg { width: 3.2mm; height: 3.2mm; }
+  /* Website QR label: brand blue with a globe icon. */
+  .qr span.web { display: flex; justify-content: center; align-items: center; gap: .8mm; color: #007acc; }
+  .qr span.web svg { width: 3.2mm; height: 3.2mm; stroke-width: 2; }
+  .contact li { font-size: 8.8pt; }
+  .footer { font-size: 8pt; }
+</style>
+</head>
+<body>
+
+<!-- Inline icon sprite (stroke icons, 24×24, matching the website). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 8V6a3 3 0 0 1 3-3h2M16 3h2a3 3 0 0 1 3 3v2M21 16v2a3 3 0 0 1-3 3h-2M8 21H6a3 3 0 0 1-3-3v-2"/><path d="M7 12h10"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4.5-5"/><circle cx="12" cy="18" r="1.4"/></symbol>
+    <symbol id="i-language" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></symbol>
+    <symbol id="i-checklist" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11"/><path d="M3.5 5l1.4 1.4L7.5 3.8M3.5 12l1.4 1.4l2.6-2.6M3.5 19l1.4 1.4l2.6-2.6"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3 4v4h4"/><path d="M12 8v4.5l3 1.8"/></symbol>
+    <symbol id="i-weather" viewBox="0 0 24 24"><path d="M7.5 17.5a4 4 0 0 1 .4-8a5.5 5.5 0 0 1 10.5 1.6a3.4 3.4 0 0 1-.6 6.4H7.5z"/><path d="M9 21l-.7 1.5M13 21l-.7 1.5M17 21l-.7 1.5"/></symbol>
+    <symbol id="i-seed" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.4"/><g fill="currentColor" stroke="none"><circle cx="12.80" cy="12.03" r="0.85"/><circle cx="10.84" cy="12.92" r="0.62"/><circle cx="11.95" cy="10.39" r="0.62"/><circle cx="13.26" cy="13.59" r="0.62"/><circle cx="9.69" cy="11.37" r="0.62"/><circle cx="14.13" cy="10.65" r="0.85"/><circle cx="11.27" cy="14.80" r="0.85"/><circle cx="10.33" cy="9.44" r="0.62"/><circle cx="14.94" cy="13.11" r="0.62"/><circle cx="8.59" cy="13.30" r="0.62"/><circle cx="13.65" cy="8.54" r="0.85"/><circle cx="13.40" cy="15.67" r="0.85"/><circle cx="8.53" cy="9.89" r="0.85"/><circle cx="16.23" cy="11.03" r="0.62"/><circle cx="9.29" cy="15.77" r="0.85"/><circle cx="11.61" cy="7.53" r="0.85"/><circle cx="15.60" cy="14.94" r="0.62"/><circle cx="7.30" cy="12.02" r="0.85"/><circle cx="15.46" cy="8.33" r="0.85"/><circle cx="11.72" cy="17.13" r="0.62"/><circle cx="8.92" cy="7.94" r="0.62"/><circle cx="17.25" cy="12.68" r="0.62"/><circle cx="7.53" cy="15.06" r="0.85"/><circle cx="13.08" cy="6.72" r="0.85"/><circle cx="14.70" cy="17.04" r="0.62"/><circle cx="6.74" cy="10.46" r="0.62"/><circle cx="17.46" cy="9.60" r="0.62"/><circle cx="9.45" cy="17.44" r="0.62"/><circle cx="9.79" cy="6.21" r="0.62"/><circle cx="17.61" cy="14.77" r="0.62"/><circle cx="5.66" cy="13.54" r="0.62"/><circle cx="15.44" cy="6.40" r="0.62"/><circle cx="13.08" cy="18.60" r="0.62"/><circle cx="6.76" cy="7.77" r="0.62"/><circle cx="18.88" cy="11.33" r="0.85"/><circle cx="7.21" cy="17.10" r="0.62"/><circle cx="12.11" cy="5.29" r="0.85"/><circle cx="16.86" cy="17.01" r="0.85"/><circle cx="4.74" cy="11.11" r="0.62"/><circle cx="17.88" cy="7.83" r="0.85"/><circle cx="10.70" cy="18.93" r="0.85"/><circle cx="8.08" cy="5.56" r="0.62"/></g></symbol>
+    <symbol id="i-feed" viewBox="0 0 24 24"><circle cx="8" cy="9" r="2.6"/><circle cx="15.5" cy="8" r="2.6"/><circle cx="11.5" cy="15" r="2.6"/><circle cx="18" cy="15.5" r="2"/><circle cx="5.5" cy="16" r="2"/></symbol>
+    <symbol id="i-medicine" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M12 9v7M8.5 12.5h7"/><path d="M8 5V3.5h8V5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.7 4.4-2.2 1.4a11 11 0 0 0 6.2 6.2l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z" fill="#fef9c3"/><path d="M10.6 9.6l1.4 1.5l1.4-1.5M12 11v4" stroke="#b45309" stroke-width="1.2"/><path d="M9.5 19h5M10.5 21.5h3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3L3 7.5l9 4.5l9-4.5L12 3z"/><path d="M3 12l9 4.5l9-4.5"/><path d="M3 16.5l9 4.5l9-4.5"/></symbol>
+    <symbol id="i-review" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H9l-5 4V5.5z"/><path d="M8.5 10l2.2 2.2L15.5 7.5"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path fill="#fde68a" d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><circle cx="15.5" cy="8.5" r="1.5"/></symbol>
+    <symbol id="i-dashboard" viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7" rx="1"/><rect x="10.5" y="6" width="3" height="12" rx="1"/><rect x="16" y="13" width="3" height="5" rx="1"/></symbol>
+    <symbol id="i-lab" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5.5 9.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></symbol>
+    <symbol id="i-pond" viewBox="0 0 24 24"><path d="M3 15.5c2-1.6 3.5-1.6 5.5 0s3.5 1.6 5.5 0s3.5-1.6 5.5 0"/><path d="M3 19.5c2-1.6 3.5-1.6 5.5 0s3.5 1.6 5.5 0s3.5-1.6 5.5 0"/><path d="M15.5 9.5c0 2-1.6 3.5-3.5 3.5S8.5 11.5 8.5 9.5S12 3 12 3s3.5 4.5 3.5 6.5z"/></symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-hatchery" viewBox="0 0 24 24"><path d="M12 3c3.5 0 6.5 5.5 6.5 10a6.5 6.5 0 0 1-13 0C5.5 8.5 8.5 3 12 3z"/><path d="M9 13.5a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V10l5 3v-3l5 3v-3l5 3V4h3v17H3z"/><path d="M7 17h2M11 17h2M15 17h2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-webdash" viewBox="0 0 24 24"><rect x="2.5" y="3.8" width="19" height="16.4" rx="2.2"/><path d="M2.5 7.8h19"/><g fill="currentColor" stroke="none"><circle cx="5" cy="5.8" r=".7"/><circle cx="7.1" cy="5.8" r=".7"/><circle cx="9.2" cy="5.8" r=".7"/></g><path d="M5.2 16.6l2.9-3.3 2.4 1.9 3.3-4.4"/><path d="M17 17.2v-3.6M19.2 17.2v-6"/><path d="M5 18.2h14.4" stroke-width="1"/></symbol>
+    <radialGradient id="bulb-glow" cx="50%" cy="42%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".45" stop-color="#fef08a" stop-opacity=".75"/><stop offset="1" stop-color="#fde047" stop-opacity="0"/></radialGradient>
+    <symbol id="i-bulb-glow" viewBox="0 0 24 24"><circle cx="12" cy="9.6" r="11.6" fill="url(#bulb-glow)" stroke="none"/><path d="M4.96 7.31L2.68 6.57M7.65 3.61L6.24 1.67M12.00 2.20L12.00 -0.20M16.35 3.61L17.76 1.67M19.04 7.31L21.32 6.57" stroke="#fff" stroke-width="1.5"/><path d="M12 3.4a5.9 5.9 0 0 0-3.5 10.6c.7.5 1.1 1.3 1.1 2.2h4.8c0-.9.4-1.7 1.1-2.2A5.9 5.9 0 0 0 12 3.4z" fill="#fde047" stroke="#fff" stroke-width="1.5"/><path d="M10.6 9.4l1.4 1.5l1.4-1.5M12 10.9v4.2" stroke="#b45309" stroke-width="1.2"/><path d="M9.6 18.6h4.8M10.6 21h2.8" stroke="#fff" stroke-width="1.6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 19.5a6 6 0 0 1 12 0"/><circle cx="17" cy="9.5" r="2.6"/><path d="M15.5 14.2a5 5 0 0 1 6 5.3"/></symbol>
+  </defs>
+</svg>
+
+<!-- ═══════════════════════════ PAGE 1 — ABOUT AQUA ASTRA ═══════════════════════════ -->
+<section class="page">
+  <div class="cover-band">
+    <div class="cover-title">
+      <h1>Aqua Astra<sup class="tm">™</sup> Enterprises</h1>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#fff" d="M0 64c160 32 320 48 480 32s320-64 480-64 320 32 480 48v40H0z"/></svg>
+  </div>
+
+  <div class="artwork"><div class="art-stage">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g-pill-text" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00695c"/><stop offset=".45" stop-color="#0e6e78"/><stop offset="1" stop-color="#007acc"/></linearGradient></defs></svg>
+    <img src="assets/hero-grow-together-te.jpg" alt="Aqua Astra — కలిసి ఎదుగుదాం: మంచి సీడ్, మంచి మందులు, మంచి ధర" />
+    <div class="pbadge" style="left:25.69%;top:29.09%"><div class="disc"><img src="assets/promise-seed.svg" alt="మంచి సీడ్" /></div><svg class="pill" viewBox="0 0 500 92" aria-label="Good Seed"><rect x="2" y="2" width="496" height="88" rx="44" fill="#fff" stroke="#bfe6ef" stroke-width="3"/><text x="250" y="52" text-anchor="middle" dominant-baseline="central" font-size="57">Good Seed</text></svg></div>
+    <div class="pbadge" style="left:70.12%;top:29.03%"><div class="disc"><img src="assets/promise-medicine.png" alt="మంచి మందులు" /></div><svg class="pill" viewBox="0 0 500 92" aria-label="Good Medicine"><rect x="2" y="2" width="496" height="88" rx="44" fill="#fff" stroke="#bfe6ef" stroke-width="3"/><text x="250" y="52" text-anchor="middle" dominant-baseline="central" font-size="57">Good Medicine</text></svg></div>
+    <div class="pbadge" style="left:47.90%;top:62.26%"><div class="disc"><img src="assets/promise-price.png" alt="మంచి ధర" /></div><svg class="pill" viewBox="0 0 500 92" aria-label="Good Price"><rect x="2" y="2" width="496" height="88" rx="44" fill="#fff" stroke="#bfe6ef" stroke-width="3"/><text x="250" y="52" text-anchor="middle" dominant-baseline="central" font-size="57">Good Price</text></svg></div>
+  </div></div>
+
+  <div class="about">
+    <div class="copy">
+      <div class="eyebrow"><span class="about-pill">మా గురించి</span> Aqua <span style="color:#0376b5">Astra</span></div>
+      <h2>వనామీ రొయ్యల రైతులకు అండగా మేము</h2>
+      <p><strong>Aqua Astra Enterprises LLP</strong> ఆంధ్రప్రదేశ్‌లోని కృష్ణా జిల్లాలో — భారతదేశ వనామీ రొయ్యల సాగుకు ముఖ్యమైన ప్రాంతంలో ఉంది.</p>
+    </div>
+    <div>
+      <div class="eyebrow">మా హామీ</div>
+      <div class="promises">
+        <div class="promise"><span class="dot" style="background:linear-gradient(135deg,#0273ab,#0b7ac3)"><svg class="icon"><use href="#i-seed"/></svg></span><div><b>మంచి సీడ్</b><small>ఆరోగ్యకరమైన సీడ్‌తో ప్రారంభం</small></div></div>
+        <div class="promise"><span class="dot" style="background:linear-gradient(135deg,#0273ab,#0b7ac3)"><svg class="icon"><use href="#i-feed"/></svg></span><div><b>మంచి ఫీడ్</b><small>సరైన ఫీడ్, సరైన సమయంలో</small></div></div>
+        <div class="promise"><span class="dot" style="background:linear-gradient(135deg,#0273ab,#0b7ac3)"><svg class="icon"><use href="#i-medicine"/></svg></span><div><b>మంచి మందులు</b><small>డేటా చూపిన సమస్యకే చికిత్స</small></div></div>
+        <div class="promise"><span class="dot" style="background:linear-gradient(135deg,#047857,#34d399)">₹</span><div><b>మంచి ధర</b><small>ఆరోగ్యకరమైన రొయ్యలు, మెరుగైన లాభాలు</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callbar">
+    <div class="call">
+      <span class="ring"><svg class="icon"><use href="#i-phone"/></svg></span>
+      <div><div class="label">కాల్ / <span class="wa-inline"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg></span>WhatsApp చేయండి</div><div class="number">+91 79894 67777</div></div>
+    </div>
+    <div class="scan">
+      <p><b>స్కాన్ చేసి చాట్ చేయండి</b><span class="wa-word"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>WhatsApp</span></p>
+      <span class="qr-tile"><img src="assets/qr-whatsapp.svg" alt="QR code: WhatsApp +91 79894 67777" /></span>
+    </div>
+  </div>
+
+  <div class="footer"><span><b><span class="aqua">Aqua</span> <span class="astra">Astra</span></b> · కలిసి ఎదుగుదాం</span><span>https://aquaastra.in</span></div>
+</section>
+
+<!-- ═══════════════════════════ PAGE 2 — SOFTWARE FOR THE AQUA INDUSTRY ═══════════════════════════ -->
+<section class="page">
+  <div class="sw-hero">
+    <span class="dots"></span>
+    <svg class="waves" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="rgba(255,255,255,.06)" d="M0 70c160 40 320 52 480 30s320-70 480-70 320 40 480 56v74H0z"/>
+      <path fill="rgba(255,255,255,.09)" d="M0 110c200 -30 380 -36 560 -8s360 46 540 22 260 -40 340 -40v76H0z"/>
+    </svg>
+    <svg class="edge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0 64c160 32 320 48 480 32s320-64 480-64 320 32 480 48v40H0z"/></svg>
+
+    <div class="sw-brand"><b>Aqua Astra Technologies</b><span>Aqua Astra Enterprises LLP వారి ఆక్వాకల్చర్ టెక్నాలజీ</span></div>
+
+    <div class="sw-art" aria-hidden="true">
+      <div class="art-inner">
+      <svg class="orbit" viewBox="0 0 62 62">
+        <circle cx="31" cy="31" r="30" fill="none" stroke="rgba(255,255,255,.12)" stroke-width=".3"/>
+        <circle cx="31" cy="31" r="23" fill="none" stroke="rgba(255,255,255,.45)" stroke-width=".35" stroke-dasharray="1.2 1.1"/>
+        <circle cx="31" cy="31" r="14" fill="none" stroke="rgba(255,255,255,.18)" stroke-width=".3"/>
+        <g stroke="rgba(255,255,255,.35)" stroke-width=".3"><line x1="31" y1="31" x2="31.00" y2="8.00"/><line x1="31" y1="31" x2="54.00" y2="31.00"/><line x1="31" y1="31" x2="31.00" y2="54.00"/><line x1="31" y1="31" x2="8.00" y2="31.00"/></g>
+        <g fill="#bdf2e7"><circle cx="47.26" cy="14.74" r="0.7"/><circle cx="47.26" cy="47.26" r="0.7"/><circle cx="14.74" cy="47.26" r="0.7"/><circle cx="14.74" cy="14.74" r="0.7"/><circle cx="59.19" cy="20.74" r="0.55"/><circle cx="2.81" cy="41.26" r="0.55"/><circle cx="41.26" cy="59.19" r="0.5"/><circle cx="20.74" cy="2.81" r="0.5"/></g>
+      </svg>
+      <span class="core">
+        <svg viewBox="0 0 24 24"><path fill="#fff" d="M11 3.5c1.25 4.4 2.75 5.9 7.2 7.2c-4.45 1.3-5.95 2.8-7.2 7.2c-1.25-4.4-2.75-5.9-7.2-7.2c4.45-1.3 5.95-2.8 7.2-7.2z"/><path fill="#bdf2e7" d="M18.6 14.6c.45 1.55 1 2.1 2.55 2.55c-1.55.45-2.1 1-2.55 2.55c-.45-1.55-1-2.1-2.55-2.55c1.55-.45 2.1-1 2.55-2.55z"/></svg>
+      </span>
+        <span class="node" style="left:25.50mm;top:2.50mm"><svg class="icon"><use href="#i-webdash"/></svg></span>
+        <span class="node" style="left:48.50mm;top:25.50mm"><svg class="icon"><use href="#i-lab"/></svg></span>
+        <span class="node" style="left:25.50mm;top:48.50mm"><svg class="icon"><use href="#i-mobile"/></svg></span>
+        <span class="node leap" style="left:2.50mm;top:25.50mm"><svg class="icon" viewBox="0 0 24 24"><image href="assets/prawn-blue.png" x="3.4" y="5.6" width="19" height="9.5"/><g fill="currentColor" stroke="none"><circle cx="3" cy="12.9" r=".6"/><circle cx="2.2" cy="11.3" r=".4"/><circle cx="7.4" cy="15.1" r=".4"/></g><path d="M2.6 15.4c2-1.5 3.5-1.5 5.5 0s3.5 1.5 5.5 0s3.5-1.5 5.5 0" stroke-width="1.2"/><path d="M2.6 19.4c2-1.5 3.5-1.5 5.5 0s3.5 1.5 5.5 0s3.5-1.5 5.5 0" stroke-width="1.2"/></svg></span>
+      </div>
+    </div>
+
+    <div class="copy">
+      <h1>ఆక్వా పరిశ్రమ కోసం <span class="hl">మెరుగైన సాఫ్ట్‌వేర్</span></h1>
+      <p>Aqua Astra మొబైల్ యాప్‌ను తయారు చేసిన మా టీమ్, మీ ఆక్వా వ్యాపారానికి కూడా సాఫ్ట్‌వేర్ తయారు చేయగలదు:</p>
+      <div class="sw-chips">
+        <span><i class="seed"><svg class="icon"><use href="#i-seed"/></svg></i>హేచరీలు</span>
+        <span><i class="leap"><svg class="icon" viewBox="0 0 24 24"><image href="assets/prawn-white.png" x="3.4" y="5.6" width="19" height="9.5"/><g fill="#fff" stroke="none"><circle cx="3" cy="12.9" r=".6"/><circle cx="2.2" cy="11.3" r=".4"/><circle cx="7.4" cy="15.1" r=".4"/></g><path d="M2.6 15.4c2-1.5 3.5-1.5 5.5 0s3.5 1.5 5.5 0s3.5-1.5 5.5 0" stroke-width="1.5"/><path d="M2.6 19.4c2-1.5 3.5-1.5 5.5 0s3.5 1.5 5.5 0s3.5-1.5 5.5 0" stroke-width="1.5"/></svg></i>ఫార్మ్‌లు</span>
+        <span><i><svg class="icon"><use href="#i-lab"/></svg></i>ల్యాబ్‌లు</span>
+        <span><i><svg class="icon"><use href="#i-factory"/></svg></i>ప్రాసెసింగ్ ప్లాంట్లు</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sw-journey-title"><span>అన్నీ సాధ్యమే</span></div>
+
+  <div class="sw-flow">
+    <!-- Connectors in a 182 x 70 mm box: 1 to 2 and 3 to 4 run straight between the tiles;
+         2 and 3 loop: over the tiles 2 to 3, under them 3 to 2. -->
+    <svg class="links" viewBox="0 0 182 70" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="sw-g12" gradientUnits="userSpaceOnUse" x1="31" x2="58" y1="0" y2="0"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+        <linearGradient id="sw-g23" gradientUnits="userSpaceOnUse" x1="76" x2="106" y1="0" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+        <linearGradient id="sw-g34" gradientUnits="userSpaceOnUse" x1="124" x2="151" y1="0" y2="0"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+        <marker id="sw-ah-v" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.4" markerHeight="4.4" orient="auto-start-reverse"><path d="M1 1l7 4-7 4" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="sw-ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.4" markerHeight="4.4" orient="auto-start-reverse"><path d="M1 1l7 4-7 4" fill="none" stroke="#06b6d4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="sw-ah-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.4" markerHeight="4.4" orient="auto-start-reverse"><path d="M1 1l7 4-7 4" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+      </defs>
+      <g fill="none" stroke-width=".55" stroke-dasharray="1.6 1.4" stroke-linecap="round">
+        <path d="M31.5 7.5H57.5" stroke="url(#sw-g12)" marker-end="url(#sw-ah-v)"/>
+        <path d="M78 3C84 -5 98 -5 104 3" stroke="url(#sw-g23)" marker-end="url(#sw-ah-c)"/>
+        <path d="M104 12C98 20 84 20 78 12" stroke="url(#sw-g23)" marker-end="url(#sw-ah-v)"/>
+        <path d="M124.5 7.5H150.5" stroke="url(#sw-g34)" marker-end="url(#sw-ah-g)"/>
+      </g>
+    </svg>
+    <div class="sw-steps">
+      <div class="sw-step" style="--tone:#b45309">
+        <span class="sw-tile glow" style="background:linear-gradient(135deg,#d97706,#fbbf24)"><svg class="icon"><use href="#i-bulb-glow"/></svg><em>1</em></span>
+        <div class="sw-card"><small>వినడం</small><b>ఆలోచన</b><p>మీ ఫార్మ్ లేదా వ్యాపారంలోని సమస్యను విని, దాన్ని తయారు చేయగలిగే రూపంలోకి మారుస్తాం.</p></div>
+      </div>
+      <div class="sw-step" style="--tone:#6d28d9">
+        <span class="sw-tile" style="background:linear-gradient(135deg,#6d28d9,#a78bfa)"><svg class="icon"><use href="#i-layers"/></svg><em>2</em></span>
+        <div class="sw-card"><small>వేగంగా తయారీ</small><b>ప్రోటోటైప్</b><p>త్వరగా పనిచేసే మొదటి వెర్షన్ — ఊహించుకోవడం కాదు, చూసి, వాడి తెలుసుకోవచ్చు.</p></div>
+      </div>
+      <div class="sw-step" style="--tone:#0e7490">
+        <span class="sw-tile" style="background:linear-gradient(135deg,#0e7490,#22d3ee)"><svg class="icon"><use href="#i-review"/></svg><em>3</em></span>
+        <div class="sw-card"><small>కలిసి మెరుగుపరచడం</small><b>సమీక్ష</b><p>మీరు వాడతారు, మేము వింటాం — మీ టీమ్ పని తీరుకు సరిపోయే వరకు కలిసి మెరుగుపరుస్తాం.</p></div>
+      </div>
+      <div class="sw-step" style="--tone:#047857">
+        <span class="sw-tile" style="background:linear-gradient(135deg,#047857,#34d399)"><svg class="icon"><use href="#i-rocket"/></svg><em>4</em></span>
+        <div class="sw-card"><small>లాంచ్ &amp; ఎదుగుదల</small><b>సాధన</b><p>మీరు ఆశించిన ఫలితాన్ని ఇచ్చే పూర్తి ఉత్పత్తి — దాన్ని మేము నిరంతరం మెరుగుపరుస్తూనే ఉంటాం.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sw-offers">
+    <h2>మీతో కలిసి మేము తయారు చేయగలిగేవి</h2>
+    <div class="sw-offer-grid">
+      <div class="sw-offer"><i><svg class="icon"><use href="#i-webdash"/></svg></i><p>మీ సొంత డేటాపై డాష్‌బోర్డ్‌లు, విశ్లేషణలు</p></div>
+      <div class="sw-offer"><i class="leap"><svg class="icon" viewBox="0 0 24 24"><image href="assets/prawn-white.png" x="3.4" y="5.6" width="19" height="9.5"/><g fill="#fff" stroke="none"><circle cx="3" cy="12.9" r=".6"/><circle cx="2.2" cy="11.3" r=".4"/><circle cx="7.4" cy="15.1" r=".4"/></g><path d="M2.6 15.4c2-1.5 3.5-1.5 5.5 0s3.5 1.5 5.5 0s3.5-1.5 5.5 0" stroke-width="1.5"/><path d="M2.6 19.4c2-1.5 3.5-1.5 5.5 0s3.5 1.5 5.5 0s3.5-1.5 5.5 0" stroke-width="1.5"/></svg></i><p>ఫార్మ్ &amp; చెరువుల నిర్వహణ</p></div>
+      <div class="sw-offer"><i><svg class="icon"><use href="#i-lab"/></svg></i><p>ల్యాబ్ &amp; నీటి నాణ్యత రిపోర్టింగ్ టూల్స్</p></div>
+      <div class="sw-offer"><i><svg class="icon"><use href="#i-mobile"/></svg></i><p>రైతులు, ఫీల్డ్ టీమ్‌ల కోసం మొబైల్ యాప్‌లు</p></div>
+      <div class="sw-offer more"><i><svg class="icon"><use href="#i-plus"/></svg></i><p>ఇంకా మరెన్నో…</p></div>
+    </div>
+  </div>
+
+  <div class="sw-prompt">మీ ఆక్వా వ్యాపారానికి ఒక ఆలోచన ఉందా? కలిసి తయారు చేద్దాం.</div>
+
+  <div class="callbar p4">
+    <div class="call">
+      <span class="ring"><svg class="icon"><use href="#i-phone"/></svg></span>
+      <div><div class="label">కాల్ / <span class="wa-inline"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg></span>WhatsApp చేయండి</div><div class="number">+91 79894 67777</div></div>
+    </div>
+    <div class="scan">
+      <p><b>వెబ్‌సైట్ కోసం స్కాన్ చేయండి</b>https://aquaastra.in</p>
+      <span class="qr-tile"><img src="assets/qr-website.svg" alt="QR code: https://aquaastra.in" /></span>
+    </div>
+  </div>
+
+  <div class="footer"><span><b class="ink">Aqua Astra Enterprises LLP</b> · కలిసి ఎదుగుదాం</span><span>https://aquaastra.in</span></div>
+</section>
+
+<!-- ═══════════════════════════ PAGE 3 — ABOUT THE APP ═══════════════════════════ -->
+<section class="page">
+  <div class="topbar">
+    <div class="brand"><img src="assets/logo-aqua-astra.png" alt="Aqua Astra logo" /><b><span class="aqua">Aqua</span> <span class="astra">Astra</span></b></div>
+    <span class="tag">యాప్ గురించి</span>
+  </div>
+
+  <div class="p2-head">
+    <div class="eyebrow">Aqua Astra మొబైల్ యాప్</div>
+    <h1>మీ చెరువు ల్యాబ్ రిపోర్ట్, <span>ఇప్పుడు సులభంగా అర్థమవుతుంది</span></h1>
+    <p>నీటి పరీక్ష రిపోర్ట్ అంటే అంకెలతో నిండిన ఒక పేజీ. Aqua Astra మొబైల్ యాప్ ఆ రిపోర్ట్‌ను మీ కోసం చదివి, ప్రతి పారామీటర్‌ను శాస్త్రీయ పరిమితులతో పోల్చి, ప్రతి చెరువుకు స్పష్టమైన హెల్త్ స్కోర్‌ను, సులభమైన భాషలో విశ్లేషణను అందిస్తుంది.</p>
+  </div>
+
+  <div class="showcase">
+    <div class="phone home"><div class="screen"><img src="assets/app-home-ponds-te.png" alt="హోమ్ స్క్రీన్: చెరువు హెల్త్ స్కోర్ 91, ఆరోగ్యంగా ఉంది" /></div></div>
+    <div class="phone reports"><div class="screen"><img src="assets/app-reports-ponds-te.png" alt="రిపోర్ట్‌ల స్క్రీన్: చెరువుల సారాంశం" /></div></div>
+
+    <div class="callout l" style="top:16mm"><span class="line"></span><span class="num">1</span><b>హెల్త్ స్కోర్ ఒక్క చూపులో</b><p>ఈ రోజు చెరువుకు శ్రద్ధ అవసరమా అని ఒక అంకె, ఒక రంగు చెబుతాయి.</p></div>
+    <div class="callout l" style="top:58mm"><span class="line"></span><span class="num">2</span><b>ప్రతి చెరువు, ఒక్క టచ్‌లో</b><p>Pond 1, Pond 2, Pond 3 — చెరువుల మధ్య మారుతూ, ప్రతి దాని తాజా రిపోర్ట్ చూడండి.</p></div>
+    <div class="callout r" style="top:20mm"><span class="line"></span><span class="num">3</span><b>సురక్షిత పరిధులతో పోలిక</b><p>ఉష్ణోగ్రత, సెలెనిటీ, pH ఇంకా మరెన్నో — ప్రతిదీ మంచిది, హెచ్చరిక లేదా ప్రమాదం గా గుర్తింపు.</p></div>
+    <div class="callout r" style="top:62mm"><span class="line"></span><span class="num">4</span><b>ఉచిత కాల్, యాప్‌లోనే</b><p>యాప్ నుంచే నేరుగా Aqua Astra టీమ్‌తో మాట్లాడండి.</p></div>
+  </div>
+
+  <!-- Google Play QR, in the open space above callout 3. -->
+  <div class="store">
+    <div class="txt">
+      <span class="gp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285f4" d="M3.6 2.2 13.4 12l-9.8 9.8c-.3-.2-.5-.6-.5-1.1V3.3c0-.5.2-.9.5-1.1Z"/><path fill="#34a853" d="M3.6 2.2c.3-.2.8-.2 1.3.1l11.5 6.6-3 3.1Z"/><path fill="#fbbc04" d="m16.4 8.9 3.6 2.1c.8.4.8 1.6 0 2l-3.6 2.1-3-3.1Z"/><path fill="#ea4335" d="m13.4 12 3 3.1-11.5 6.6c-.5.3-1 .3-1.3.1Z"/></svg>Google Play</span>
+      <b><i class="dl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10.5m0 0-4.2-4.2M12 14.5l4.2-4.2"/><path d="M5 14.5v3a2.5 2.5 0 0 0 2.5 2.5h9a2.5 2.5 0 0 0 2.5-2.5v-3"/></svg></i>యాప్ డౌన్‌లోడ్</b>
+      <p>స్కాన్ చేసి ఇన్‌స్టాల్ చేయండి</p>
+    </div>
+    <span class="tile"><img src="assets/qr-playstore.svg" alt="QR code: Aqua Astra app on Google Play" /></span>
+  </div>
+
+  <div class="feat-head"><h2>యాప్‌లో ఏముంది</h2><span>ఆరు టూల్స్, ఒకే సులభమైన స్క్రీన్</span></div>
+
+  <div class="features">
+    <div class="feature" style="--c1:#0f766e;--c2:#14b8a6;--tint:#ecfdf8;--line:#c7efe6"><span class="num">01</span><span class="ic"><svg class="icon"><use href="#i-scan"/></svg></span><div><b>ల్యాబ్ రిపోర్ట్ విశ్లేషణ</b><p>సెకన్లలో మీ రిపోర్ట్‌లోని ప్రతి పారామీటర్ వివరణ.</p></div></div>
+    <div class="feature" style="--c1:#0a63a3;--c2:#2aa2f7;--tint:#eef6ff;--line:#cfe3f7"><span class="num">02</span><span class="ic"><svg class="icon"><use href="#i-gauge"/></svg></span><div><b>చెరువు హెల్త్ స్కోర్</b><p>ప్రతి చెరువుకు స్పష్టమైన రంగుతో ఒకే స్కోర్.</p></div></div>
+    <div class="feature" style="--c1:#6d28d9;--c2:#a78bfa;--tint:#f5f1ff;--line:#e2d7fb"><span class="num">03</span><span class="ic"><svg class="icon"><use href="#i-language"/></svg></span><div><b>English &amp; <span class="te">తెలుగు</span></b><p>యాప్ మొత్తం రెండు భాషల్లోనూ — ఎప్పుడైనా మార్చుకోవచ్చు.</p></div></div>
+    <div class="feature" style="--c1:#b45309;--c2:#f59e0b;--tint:#fff8ec;--line:#f6e2bf"><span class="num">04</span><span class="ic"><svg class="icon"><use href="#i-checklist"/></svg></span><div><b>చేయాల్సిన సూచనలు</b><p>సమస్య ఉన్న పారామీటర్‌కు తగ్గ స్పష్టమైన చర్యలు.</p></div></div>
+    <div class="feature" style="--c1:#0e7490;--c2:#22d3ee;--tint:#ecfbfe;--line:#c4ecf4"><span class="num">05</span><span class="ic"><svg class="icon"><use href="#i-history"/></svg></span><div><b>రిపోర్ట్ చరిత్ర</b><p>ప్రతి విశ్లేషణ సేవ్ అవుతుంది — చెరువు ట్రెండ్‌ను గమనించవచ్చు.</p></div></div>
+    <div class="feature" style="--c1:#047857;--c2:#34d399;--tint:#edfdf5;--line:#c6efdb"><span class="num">06</span><span class="ic"><svg class="icon"><use href="#i-weather"/></svg></span><div><b>వాతావరణ సమాచారం</b><p>మీ రీడింగ్‌లతో పాటు స్థానిక వాతావరణ పరిస్థితులు.</p></div></div>
+  </div>
+
+  <div class="audience">
+    <span class="label">ఎవరి కోసం</span>
+    <span class="chip"><i><svg class="icon" viewBox="0 0 24 24"><image href="assets/prawn-blue.png" x="-2" y="4.5" width="28" height="14"/></svg></i>వనామీ రొయ్యల రైతులు</span>
+    <span class="chip"><i><svg class="icon"><use href="#i-user"/></svg></i>కన్సల్టెంట్లు</span>
+    <span class="chip"><i><svg class="icon"><use href="#i-lab"/></svg></i>ల్యాబొరేటరీలు</span>
+    <span class="chip"><i><svg class="icon"><use href="#i-team"/></svg></i>మేనేజర్లు &amp; పరిశోధకులు</span>
+  </div>
+
+  <div class="footer"><span><b><span class="aqua">Aqua</span> <span class="astra">Astra</span></b> · కలిసి ఎదుగుదాం</span><span>https://aquaastra.in</span></div>
+</section>
+
+<!-- ═══════════════════════════ PAGE 4 — HOW IT WORKS ═══════════════════════════ -->
+<section class="page">
+  <div class="topbar">
+    <div class="brand"><img src="assets/logo-aqua-astra.png" alt="Aqua Astra logo" /><b><span class="aqua">Aqua</span> <span class="astra">Astra</span></b></div>
+    <span class="tag">ఎలా పనిచేస్తుంది</span>
+  </div>
+
+  <div class="p3-head">
+    <div class="eyebrow">ఎలా పనిచేస్తుంది</div>
+    <h1>రిపోర్ట్ పంపండి. చదివే పని మాది.</h1>
+    <p>మీ ల్యాబ్ రిపోర్ట్‌ను ఒక్కసారి Aqua Astra కు పంపండి. ఫలితాలు యాప్‌లో సిద్ధంగా ఉంటాయి, అదే రిపోర్ట్ కార్డ్ మీ <span style="color:#1da851">WhatsApp</span> కు కూడా వస్తుంది.</p>
+  </div>
+
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-visual">
+        <div class="mini-phone upload">
+          <div class="screen" style="position:relative">
+            <img src="assets/app-upload-report-te.png" alt="రిపోర్ట్ అప్‌లోడ్ స్క్రీన్" />
+            <span class="tap-ring"></span>
+            <svg class="tap-hand" viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10l5.2 1.2a2 2 0 0 1 1.5 1.9L18 19a2 2 0 0 1-2 1.8h-4.3a2 2 0 0 1-1.6-.8L6 15.2a1.5 1.5 0 0 1 2.3-1.9L9 14.2Z" fill="#fff" stroke="#0f172a" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="badge"><span style="background:linear-gradient(135deg,#d97706,#fbbf24)">1</span>మీ రిపోర్ట్ పంపండి</div>
+      <p><b>రిపోర్ట్ అప్‌లోడ్ చేయండి</b> నొక్కి, ల్యాబ్ రిపోర్ట్ PDF లేదా దాని ఫోటోను పంపండి.</p>
+    </div>
+
+    <div class="flow-arrow"><svg class="icon"><use href="#i-arrow"/></svg></div>
+
+    <div class="flow-step">
+      <div class="flow-visual">
+        <div class="mini-phone app"><div class="screen"><div class="sbar"><span class="t">12:57</span><svg viewBox="0 0 24 24" class="n"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4Z"/></svg><i class="sp"></i><svg viewBox="0 0 24 24" class="r"><path fill="currentColor" d="M12 20.5 1 8.8A15.5 15.5 0 0 1 23 8.8Z"/></svg><svg viewBox="0 0 24 24" class="r"><path fill="currentColor" d="M3 20h3v-4H3Zm5 0h3v-8H8Zm5 0h3V8h-3Zm5 0h3V4h-3Z"/></svg><span class="bat">73</span></div><img src="assets/app-home-tall-te.png" alt="యాప్‌లో చెరువు హెల్త్ స్కోర్" /></div></div>
+      </div>
+      <div class="badge"><span style="background:linear-gradient(135deg,#6d28d9,#a78bfa)">2</span>యాప్‌లో చూడండి</div>
+      <p>ప్రతి చెరువుకు హెల్త్ స్కోర్ — సురక్షిత పరిధులతో పోల్చి, సులభమైన సలహాలతో.</p>
+    </div>
+
+    <div class="flow-arrow"><svg class="icon"><use href="#i-arrow"/></svg></div>
+
+    <div class="flow-step">
+      <div class="flow-visual">
+        <div class="chat">
+          <div class="sbar"><span class="t">12:57</span><svg viewBox="0 0 24 24" class="n"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4Z"/></svg><i class="sp"></i><svg viewBox="0 0 24 24" class="r"><path fill="currentColor" d="M12 20.5 1 8.8A15.5 15.5 0 0 1 23 8.8Z"/></svg><svg viewBox="0 0 24 24" class="r"><path fill="currentColor" d="M3 20h3v-4H3Zm5 0h3v-8H8Zm5 0h3V8h-3Zm5 0h3V4h-3Z"/></svg><span class="bat">73</span></div>
+          <div class="chat-head">
+            <img src="assets/whatsapp-avatar.webp" alt="" />
+            <b>+91 79894 67777<span class="wa-badge"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg></span></b>
+          </div>
+          <div class="chat-body">
+            <div class="bubble">
+              <img src="assets/app-whatsapp-card-healthy-te.png" alt="WhatsApp లో Aqua Astra ఫార్మ్ రిపోర్ట్ కార్డ్: 91, ఆరోగ్యంగా ఉంది" />
+              <p>మీ Aqua Astra రిపోర్ట్ కార్డ్. పూర్తి వివరాల కోసం యాప్ ఓపెన్ చేయండి.</p>
+              <small>Aqua Astra</small>
+            </div>
+          </div>
+          <div class="chat-bar"><span>సందేశం</span><i><svg viewBox="0 0 24 24"><path fill="#fff" d="M3.4 20.4 21 12 3.4 3.6 3.4 10.2 15.4 12 3.4 13.8z"/></svg></i></div>
+        </div>
+      </div>
+      <div class="badge"><span style="background:linear-gradient(135deg,#047857,#34d399)">3</span>WhatsApp లో పొందండి</div>
+      <p>అదే రిపోర్ట్ కార్డ్ <b>+91 79894 67777</b> నుంచి మీ చాట్‌కు వస్తుంది.</p>
+    </div>
+  </div>
+
+  <div class="engine">
+    <div class="engine-head">
+      <h2>మీ రిపోర్ట్‌ను మేము ఎలా విశ్లేషిస్తాం</h2>
+      <span>ఆరు దశలు, సెకన్లలో</span>
+    </div>
+    <div class="engine-grid">
+      <div class="eng"><span class="n">01</span><b>రిపోర్ట్ అప్‌లోడ్</b><p>రిపోర్ట్ PDF లేదా ఫోటో పంపండి — మళ్లీ టైప్ చేయనక్కర్లేదు.</p></div>
+      <div class="eng"><span class="n">02</span><b>వివరాల సేకరణ</b><p>పారామీటర్లు, విలువలు నేరుగా పేజీ నుంచే చదవబడతాయి.</p></div>
+      <div class="eng"><span class="n">03</span><b>శాస్త్రీయ రూల్ ఇంజిన్</b><p>ప్రతి విలువను నిర్దేశిత శాస్త్రీయ పరిమితులతో పోల్చి చూస్తుంది.</p></div>
+      <div class="eng"><span class="n">04</span><b>AI వివరణ</b><p>ఏది సరిగా లేదు, అది ఎందుకు ముఖ్యం — English లేదా <span class="te">తెలుగు</span>లో.</p></div>
+      <div class="eng"><span class="n">05</span><b>హెల్త్ స్కోర్</b><p>ప్రతి చెరువుకు ఒక అంకె, ఒక రంగు — ఒక్క చూపులో.</p></div>
+      <div class="eng"><span class="n">06</span><b>విశ్లేషణ &amp; చరిత్ర</b><p>తదుపరి చర్యలు — రిపోర్ట్ చెరువు ట్రెండ్‌లో సేవ్ అవుతుంది.</p></div>
+    </div>
+  </div>
+
+  <div class="good">
+    <div><svg class="icon"><use href="#i-check"/></svg>మళ్లీ టైప్ చేయాల్సిన అవసరం లేదు</div>
+    <div><svg class="icon"><use href="#i-check"/></svg>మీ కన్సల్టెంట్‌తో కలిసి పనిచేస్తుంది</div>
+    <div><svg class="icon"><use href="#i-check"/></svg>ఎప్పుడైనా భాష మార్చుకోవచ్చు</div>
+  </div>
+
+  <div class="contact">
+    <div style="position:relative;z-index:1">
+      <h2>మీ తదుపరి ల్యాబ్ రిపోర్ట్‌తో ప్రారంభించండి</h2>
+      <p class="sub">Aqua Astra టీమ్‌కు కాల్ లేదా WhatsApp చేయండి — మేము మీకు సెటప్ చేసి ఇస్తాం.</p>
+      <ul>
+        <li><svg class="icon"><use href="#i-phone"/></svg>+91 79894 67777</li>
+        <li><svg class="icon"><use href="#i-globe"/></svg>aquaastra.in</li>
+        <li class="wide"><svg class="icon"><use href="#i-mail"/></svg>aquaastraenterprises@gmail.com</li>
+        <li class="wide"><svg class="icon"><use href="#i-pin"/></svg>6-137, మొదటి అంతస్తు, అర్తమూరు, బంటుమిల్లి, కృష్ణా జిల్లా, ఆంధ్రప్రదేశ్ 521369</li>
+      </ul>
+    </div>
+    <div class="qrs">
+      <div class="qr"><img src="assets/qr-whatsapp.svg" alt="QR code: WhatsApp +91 79894 67777" /><span class="wa"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>WHATSAPP</span></div>
+      <div class="qr"><img src="assets/qr-website.svg" alt="QR code: aquaastra.in" /><span class="web"><svg class="icon"><use href="#i-globe"/></svg>వెబ్‌సైట్</span></div>
+    </div>
+  </div>
+
+  <div class="footer"><span><b class="ink">Aqua Astra Enterprises LLP</b> · కలిసి ఎదుగుదాం</span><span>https://aquaastra.in</span></div>
+</section>
+
+
+</body>
+</html>

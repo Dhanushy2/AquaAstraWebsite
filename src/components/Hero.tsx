@@ -4,9 +4,13 @@ import HeroCarousel from "./HeroCarousel";
 import { Container } from "./Layout";
 import PhoneMockup from "./PhoneMockup";
 import WhatsAppCards from "./WhatsAppCards";
-import { appWalkthrough, hero, heroPosters, highlights } from "@/lib/content";
+import { type Content, getContent } from "@/lib/content-i18n";
+import type { Lang } from "@/lib/i18n";
 
-export default function Hero() {
+type Poster = Content["heroPosters"]["artwork"];
+
+export default function Hero({ lang = "en" }: { lang?: Lang }) {
+  const { heroPosters, highlights, ui } = getContent(lang);
   return (
     <div id="top" className="relative overflow-hidden bg-brand-gradient">
       {/* Decorative water texture. */}
@@ -35,14 +39,15 @@ export default function Hero() {
 
       {/* The whole hero panel slides: brand artwork, a farm photo, the pitch, then how the app works. */}
       <HeroCarousel
+        labels={ui.hero.carousel}
         slides={[
           {
-            label: "Aqua Astra — Grow Together",
+            label: ui.hero.slides.artwork,
             content: <HeroPoster poster={heroPosters.artwork} priority />,
           },
-          { label: "Harvest day on the farm", content: <HeroPoster poster={heroPosters.harvest} /> },
-          { label: "What Aqua Astra does", content: <HeroPitch /> },
-          { label: "How the app works", content: <HeroAppSteps /> },
+          { label: ui.hero.slides.harvest, content: <HeroPoster poster={heroPosters.harvest} /> },
+          { label: ui.hero.slides.pitch, content: <HeroPitch lang={lang} /> },
+          { label: ui.hero.slides.steps, content: <HeroAppSteps lang={lang} /> },
         ]}
       />
 
@@ -86,7 +91,7 @@ function HeroPoster({
   poster,
   priority = false,
 }: {
-  poster: (typeof heroPosters)[keyof typeof heroPosters];
+  poster: Poster;
   priority?: boolean;
 }) {
   return (
@@ -155,7 +160,8 @@ function HeroPoster({
  * (copy sits at the top) and left-to-right on desktop (copy sits at the left),
  * so the text always has a dark ground while the pond stays visible.
  */
-function HeroPitch() {
+function HeroPitch({ lang }: { lang: Lang }) {
+  const { hero, ui } = getContent(lang);
   return (
     <div className="relative">
       <div aria-hidden="true" className="absolute inset-0">
@@ -202,7 +208,7 @@ function HeroPitch() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <PhoneMockup />
+            <PhoneMockup text={ui.phone} />
           </div>
         </div>
       </Container>
@@ -219,7 +225,8 @@ function HeroPitch() {
  * tallest one's height, the picture slides were lost in a sea of blur. The
  * bottom padding keeps the carousel controls clear.
  */
-function HeroAppSteps() {
+function HeroAppSteps({ lang }: { lang: Lang }) {
+  const { appWalkthrough, ui } = getContent(lang);
   const { steps, screens, whatsappFrom } = appWalkthrough;
   return (
     <div className="relative">
@@ -294,7 +301,7 @@ function HeroAppSteps() {
 
           {/* 3 — on WhatsApp, from the Aqua Astra number */}
           <FlowStep n={3} step={steps[2]}>
-            <WhatsAppCards from={whatsappFrom} cards={screens.cards} />
+            <WhatsAppCards from={whatsappFrom} cards={screens.cards} text={ui.whatsapp} />
           </FlowStep>
         </ol>
 

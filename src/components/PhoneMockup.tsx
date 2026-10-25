@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { ui } from "@/lib/content";
 
 /**
  * Real app screenshots in a phone frame, crossfading every 2.5s — quick enough
@@ -12,20 +13,13 @@ import { useEffect, useRef, useState } from "react";
  */
 const SCREEN_MS = 2500;
 
-const screens = [
-  {
-    src: "/app-home-health-score.webp",
-    label: "Home",
-    alt: "Aqua Astra home screen: pond T1's water analysis report with a health score of 91, Healthy, and a recent report summary of temperature, salinity and pH.",
-  },
-  {
-    src: "/app-reports-pond-summary.webp",
-    label: "Reports",
-    alt: "Aqua Astra reports screen: a lab report scored 78%, Good, with a ponds summary rating T1 at 91%, T2 at 74% and T3 at 88%.",
-  },
-];
+export type PhoneText = typeof ui.phone;
 
-export default function PhoneMockup() {
+export default function PhoneMockup({ text = ui.phone }: { text?: PhoneText }) {
+  const screens = [
+    { src: "/app-home-health-score.webp", label: text.home, alt: text.homeAlt },
+    { src: "/app-reports-pond-summary.webp", label: text.reports, alt: text.reportsAlt },
+  ];
   const frameRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(false);
@@ -91,7 +85,7 @@ export default function PhoneMockup() {
             key={screen.src}
             type="button"
             onClick={() => setIndex(i)}
-            aria-label={`Show ${screen.label} screen`}
+            aria-label={text.showScreen.replace("{label}", screen.label)}
             aria-pressed={i === index}
             className={`h-2 rounded-full transition-all ${
               i === index ? "w-6 bg-white" : "w-2 bg-white/45 hover:bg-white/70"

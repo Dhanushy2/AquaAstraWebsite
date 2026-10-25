@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { ui } from "@/lib/content";
 
 /**
  * A WhatsApp chat in a phone frame: the report cards arrive one by one, each
@@ -15,9 +16,11 @@ export type ChatCard = { src: string; alt: string };
 export default function WhatsAppCards({
   from,
   cards,
+  text = ui.whatsapp,
 }: {
   from: string;
   cards: readonly ChatCard[];
+  text?: typeof ui.whatsapp;
 }) {
   const [index, setIndex] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -79,7 +82,7 @@ export default function WhatsAppCards({
               className="h-auto w-full rounded-lg"
             />
             <p className="px-1 pb-0.5 pt-1 text-right text-[0.6rem] text-slate-400">
-              Aqua Astra
+              {text.signature}
             </p>
           </div>
         </div>
@@ -91,7 +94,7 @@ export default function WhatsAppCards({
             key={c.src}
             type="button"
             onClick={() => setIndex(i)}
-            aria-label={`Show report card ${i + 1}`}
+            aria-label={text.showCard.replace("{n}", String(i + 1))}
             aria-pressed={i === index}
             className={`h-2 rounded-full transition-all ${
               i === index ? "w-6 bg-white" : "w-2 bg-white/45 hover:bg-white/70"

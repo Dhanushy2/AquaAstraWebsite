@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aqua Astra Flex 10x5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ── Flex banner, 10 × 5 ft ──────────────────────────────────────────
+     Laid out at 1:10 scale (1 mm here = 1 cm on the banner): 304.8 × 152.4 mm.
+     The print step scales it ×10 onto a 3048 × 1524 mm page. Text, icons and QR
+     codes stay vector; keep anything important 6 mm (6 cm real) inside the edge. */
+  @page { size: 304.8mm 152.4mm; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  :root {
+    --teal-ink: #0e6e78;
+    --mint: #bdf3e8;
+    --gradient: linear-gradient(135deg, #00695c 0%, #0e6e78 45%, #007acc 100%);
+  }
+  html, body { margin: 0; padding: 0; }
+  body { background: #dfe6ec; font-family: "Poppins", sans-serif; color: #1e293b; }
+  .flex {
+    position: relative; width: 304.8mm; height: 152.4mm; overflow: hidden; margin: 8mm auto;
+    background: radial-gradient(170mm 110mm at 50% 36%, #ffffff 0%, #f3fbfd 55%, #e3f4f8 100%);
+    box-shadow: 0 6px 24px rgba(15, 40, 60, .18);
+  }
+  @media print { body { background: none; } .flex { margin: 0; box-shadow: none; } }
+  .abs { position: absolute; }
+  .icon { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Top: deities and logo */
+  .ripples { left: 0; top: 0; width: 100%; height: 100%; }
+  .sai { left: 14mm; top: 7mm; height: 14mm; }
+  .ganesha { left: 50%; top: 6.5mm; height: 10.5mm; transform: translateX(-50%); }
+  .krishna { right: 14mm; top: 7mm; height: 13mm; }
+  .logo { left: 50%; top: 27mm; width: 94mm; transform: translateX(-50%); mix-blend-mode: multiply; }
+  /* Gradient headings are SVG text: CSS background-clip text leaves faint boxes in the PDF. */
+  .co-top { left: 0; top: 18mm; width: 304.8mm; height: 9mm; overflow: visible; }
+  .gtext { font-family: "Poppins", sans-serif; font-weight: 700; fill: url(#g-text); }
+
+  /* Promise badges around the logo: Good Seed (left), Good Medicine (right), Good Price (bottom, on the wave). */
+  .badge { width: 36mm; text-align: center; }
+  .badge.l { left: 44mm; top: 41.5mm; }
+  .badge.r { right: 44mm; top: 41.5mm; }
+  .badge.b { left: 50%; top: 88.6mm; transform: translateX(-50%); }
+  .badge.l .disc, .badge.r .disc { width: 27.5mm; height: 27.5mm; }
+  .badge .disc { width: 23mm; height: 23mm; margin: 0 auto; padding: .9mm; border-radius: 50%; background: linear-gradient(135deg, #00695c 0%, #0e6e78 45%, #007acc 100%); box-shadow: 0 0 0 1.4mm rgba(32, 176, 156, .16); }
+  .badge .disc img { display: block; width: 100%; height: 100%; border-radius: 50%; border: .9mm solid #fff; box-sizing: border-box; background: #fff; }
+  .badge svg.lbl { display: block; width: 36mm; height: 8mm; margin-top: 1.2mm; overflow: visible; }
+  .badge b { display: block; margin-top: 2mm; padding: .1em 0 .2em; font-size: 13pt; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+  .badge.b .disc { width: 21mm; height: 21mm; box-shadow: 0 0 0 1.4mm rgba(255, 255, 255, .22); }
+  .badge.b b { margin-top: 1.3mm; font-size: 11.5pt; color: #fff; }
+
+  /* Small WhatsApp QR in the wave band, right of the phone number. */
+  .waqr { left: 239mm; top: 112.6mm; width: 19.6mm; padding: 1.6mm 1.6mm 1.3mm; border-radius: 2.6mm; background: #fff; text-align: center; }
+  .waqr img { display: block; width: 100%; }
+  .waqr span { display: flex; justify-content: center; align-items: center; gap: .8mm; margin-top: .7mm; font-size: 6.2pt; font-weight: 700; letter-spacing: .04em; color: #1da851; line-height: 1.2; }
+  .waqr span svg { width: 3mm; height: 3mm; }
+
+  /* Bottom: the wave band with phone, address, name */
+  .wave { left: 0; bottom: 0; width: 100%; height: 64mm; }
+  .row { left: 14mm; right: 14mm; display: flex; justify-content: center; align-items: center; color: #fff; white-space: nowrap; line-height: 1; }
+  .call { top: 119.2mm; gap: 3.4mm; font-size: 21pt; font-weight: 700; letter-spacing: .02em; }
+  .call i { display: grid; place-items: center; width: 10mm; height: 10mm; border-radius: 50%; background: #fff; color: var(--teal-ink); }
+  .call i svg { width: 6.2mm; height: 6.2mm; stroke-width: 2.1; }
+  .call small { display: inline-flex; align-items: center; gap: 1.6mm; font-size: 11.5pt; font-weight: 600; letter-spacing: .08em; color: var(--mint); margin-left: 1mm; }
+  .call small svg { width: 5.8mm; height: 5.8mm; color: #25d366; }
+
+  .name { top: 132.3mm; }
+  .addr { top: 140.4mm; gap: 2mm; font-size: 10pt; }
+  .addr i { display: grid; place-items: center; width: 5.8mm; height: 5.8mm; border-radius: 50%; background: #fff; color: var(--teal-ink); }
+  .addr i svg { width: 3.8mm; height: 3.8mm; stroke-width: 2.1; }
+  .name b { font-size: 15.5pt; font-weight: 700; }
+  .name small { margin-left: 2mm; font-size: 13pt; font-weight: 500; letter-spacing: .04em; color: var(--mint); }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.7 4.4-2.2 1.4a11 11 0 0 0 6.2 6.2l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-feed" viewBox="0 0 24 24"><circle cx="8" cy="9" r="2.6"/><circle cx="15.5" cy="8" r="2.6"/><circle cx="11.5" cy="15" r="2.6"/><circle cx="18" cy="15.5" r="2"/><circle cx="5.5" cy="16" r="2"/></symbol>
+    <symbol id="i-medicine" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M12 9v7M8.5 12.5h7"/><path d="M8 5V3.5h8V5"/></symbol>
+    <symbol id="i-seed" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.6"/><g fill="currentColor" stroke="none"><circle cx="12" cy="12" r="1.4"/><circle cx="8.6" cy="10" r="1.1"/><circle cx="15.3" cy="9.6" r="1.1"/><circle cx="9.8" cy="15.2" r="1.1"/><circle cx="14.8" cy="14.9" r="1.1"/><circle cx="12" cy="7.2" r=".9"/><circle cx="12.2" cy="17.2" r=".9"/><circle cx="7" cy="13.3" r=".9"/><circle cx="17.1" cy="12.6" r=".9"/></g></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.9.92-2.99-.2-.31a8.2 8.2 0 1 1 6.83 3.72Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+    <linearGradient id="g-wave" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00695c"/><stop offset=".45" stop-color="#0e6e78"/><stop offset="1" stop-color="#007acc"/></linearGradient>
+    <linearGradient id="g-wave-back" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#20b09c"/><stop offset="1" stop-color="#2aa2f7"/></linearGradient>
+  </defs>
+</svg>
+
+<section class="flex">
+  <svg class="abs ripples" viewBox="0 0 304.8 152.4" aria-hidden="true">
+    <g fill="none" stroke="#0e6e78">
+      <ellipse cx="152.4" cy="55" rx="62" ry="34" stroke-opacity=".06" stroke-width=".6"/>
+      <ellipse cx="152.4" cy="55" rx="98" ry="56" stroke-opacity=".05" stroke-width=".6"/>
+      <ellipse cx="152.4" cy="55" rx="140" ry="80" stroke-opacity=".04" stroke-width=".6"/>
+      <ellipse cx="152.4" cy="55" rx="185" ry="106" stroke-opacity=".035" stroke-width=".6"/>
+    </g>
+  </svg>
+
+  <!-- Bubbles as SVG circles (CSS radial gradients mis-encode in the scaled PDF). -->
+  <svg class="abs ripples" viewBox="0 0 304.8 152.4" aria-hidden="true">
+    <defs>
+      <radialGradient id="g-bubble" cx=".5" cy=".5" r=".5" fx=".32" fy=".3">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".2" stop-color="#ffffff"/>
+        <stop offset=".5" stop-color="#d6f0f9"/><stop offset="1" stop-color="#a9d3ea"/>
+      </radialGradient>
+    </defs>
+    <g fill="url(#g-bubble)" stroke="#8cc4e3" stroke-width=".3">
+      <circle cx="94" cy="36" r="3"/><circle cx="96" cy="44" r="1.5"/><circle cx="91" cy="74" r="2"/>
+      <circle cx="211" cy="33" r="2.2"/><circle cx="208.6" cy="40.5" r="1.2"/><circle cx="213.3" cy="71.5" r="2.5"/>
+      <circle cx="10.6" cy="45.6" r="1.6"/><circle cx="294" cy="53.8" r="1.8"/>
+    </g>
+  </svg>
+
+  <img class="abs sai" src="assets/saibaba-brand.png" alt="Sai Baba" />
+  <img class="abs ganesha" src="assets/ganesha-brand.png" alt="Lord Ganesha" />
+  <img class="abs krishna" src="assets/krishna-brand.png" alt="Lord Krishna playing the flute" />
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <linearGradient id="g-text" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00695c"/><stop offset=".45" stop-color="#0e6e78"/><stop offset="1" stop-color="#007acc"/></linearGradient>
+  </defs></svg>
+  <svg class="abs co-top" viewBox="0 0 304.8 9" aria-label="Aqua Astra Enterprises"><text class="gtext" x="152.4" y="4.5" text-anchor="middle" dominant-baseline="central" font-size="6" letter-spacing=".36">Aqua Astra Enterprises</text></svg>
+  <img class="abs logo" src="assets/logo-grow-together-hd.png" alt="Aqua Astra — Grow Together" />
+
+  <svg class="abs wave" viewBox="0 0 304.8 64" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 6C45 1 87 9 138 4.5S234 .5 304.8 4V64H0z" fill="url(#g-wave-back)" fill-opacity=".35"/>
+    <path d="M0 11C51 7.5 96 12.5 151 9.5S247 7.5 304.8 10V64H0z" fill="url(#g-wave)"/>
+    <path d="M0 11C51 7.5 96 12.5 151 9.5S247 7.5 304.8 10" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".5"/>
+    <path d="M0 60C58 57.5 109 61.5 167 59S257 57 304.8 59" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width=".4"/>
+  </svg>
+
+  <div class="abs badge l"><div class="disc"><img src="assets/promise-seed.svg" alt="Good Seed" /></div><svg class="lbl" viewBox="0 0 36 8" aria-label="Good Seed"><text class="gtext" x="18" y="4" text-anchor="middle" dominant-baseline="central" font-size="5.1">Good Seed</text></svg></div>
+  <div class="abs badge r"><div class="disc"><img src="assets/promise-medicine.png" alt="Good Medicine" /></div><svg class="lbl" viewBox="0 0 36 8" aria-label="Good Medicine"><text class="gtext" x="18" y="4" text-anchor="middle" dominant-baseline="central" font-size="5.1">Good Medicine</text></svg></div>
+  <div class="abs badge b"><div class="disc"><img src="assets/promise-price.png" alt="Good Price" /></div><b>Good Price</b></div>
+  <div class="abs waqr"><img src="assets/qr-whatsapp.svg" alt="QR code: WhatsApp +91 79894 67777" /><span><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>WHATSAPP</span></div>
+  <div class="abs row call"><i><svg class="icon"><use href="#i-phone"/></svg></i>+91 79894 67777<small>CALL ·<svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>WHATSAPP</small></div>
+  <div class="abs row name"><b>Yarlagadda Srinivasa Rao</b><small>(YSR) - MA</small></div>
+  <div class="abs row addr"><i><svg class="icon"><use href="#i-pin"/></svg></i>6-137, 1st Floor, Arthamuru, Bantumilli, Krishna District, Andhra Pradesh 521369</div>
+</section>
+
+</body>
+</html>
