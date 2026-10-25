@@ -24,7 +24,15 @@ export function rootMetadata(lang: Lang): Metadata {
       url: site.url,
       locale: lang === "te" ? "te_IN" : "en_IN",
     },
-    icons: { icon: "/favicon.svg" },
+    // The A + shrimp mark from the logo; the full logo is unreadable at tab size.
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+        { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+        { url: "/favicon-192.png", type: "image/png", sizes: "192x192" },
+      ],
+      apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+    },
     verification: {
       other: { "facebook-domain-verification": "ijg40cyzpf3a1qz5kyd3vebs57ispv" },
     },
